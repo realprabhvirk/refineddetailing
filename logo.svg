@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">Refined Detailing logo</title>
+  <desc id="desc">Stylised car silhouette with metallic "REFINED" wordmark and "DETAILING" subtitle.</desc>
+  <defs>
+    <linearGradient id="silverGrad" x1="0" x2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="30%" stop-color="#d9d9d9"/>
+      <stop offset="60%" stop-color="#9ea3a8"/>
+      <stop offset="100%" stop-color="#616569"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0" x2="1">
+      <stop offset="0%" stop-color="#89c8ea"/>
+      <stop offset="100%" stop-color="#6aa6c8"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Car silhouette (stroke-only) -->
+  <path d="M60,200 C140,80 300,60 420,110 C540,160 720,160 900,110 C980,90 1100,86 1140,110"
+        stroke="url(#silverGrad)" stroke-width="18" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Blue accent swoosh -->
+  <path d="M120,200 C250,150 420,150 560,170 C700,190 880,180 1020,140"
+        stroke="url(#blueGrad)" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+
+  <!-- Subtle lower body shadow -->
+  <path d="M60,200 C140,220 300,220 420,200 C540,180 720,180 900,200 C980,210 1100,210 1140,200"
+        fill="none" stroke="rgba(0,0,0,0.18)" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Wordmark: REFINED -->
+  <text x="48" y="270" font-family="Poppins, sans-serif" font-weight="700" font-size="120" fill="url(#silverGrad)" letter-spacing="6">REFINED</text>
+
+  <!-- Subtitle: DETAILING -->
+  <text x="520" y="312" font-family="'Barlow Condensed', sans-serif" font-weight="600" font-size="32" fill="#dfe6ea" letter-spacing="8">DETAILING</text>
+
+  <!-- Decorative lines -->
+  <rect x="20" y="300" width="180" height="2" fill="url(#silverGrad)" opacity="0.95"/>
+  <rect x="1000" y="300" width="180" height="2" fill="url(#silverGrad)" opacity="0.95"/>
+
+</svg>

@@ -1,0 +1,251 @@
+============================================================
+  REFINED DETAILING — IMAGE GUIDE
+  image-guide.txt
+  This file is NOT linked to the website. For reference only.
+============================================================
+
+All images should be placed in the same folder as the HTML files.
+Pexels URLs are currently used as fallbacks. Replace with your own
+real photos as soon as possible — nothing beats actual job shots.
+
+------------------------------------------------------------
+GENERAL PHOTOGRAPHY TIPS — CAR DETAILING
+------------------------------------------------------------
+- Shoot in the early morning (golden hour) or on overcast days.
+  Harsh midday sun creates glare and kills detail in paint shots.
+- Use a reflective surface test: good lighting = you can see
+  definition in the reflections. Bad lighting = flat, dull paint.
+- Always shoot AFTER detail work, not during (unless intentional).
+- A dark/black vehicle shows polish and reflection best.
+- Get low — bonnet-level shots feel dramatic and premium.
+- Avoid shooting near cluttered backgrounds (neighbour's bins, etc.).
+  A driveway with a plain fence or lawn behind works well.
+- For interior shots: shoot from the passenger side looking into
+  the driver area, or from the rear seat looking forward.
+- Keep your phone/camera lens clean. Smudges kill sharpness.
+- For social media ready shots: 1:1 ratio works for Instagram,
+  16:9 for Facebook and website banners.
+
+------------------------------------------------------------
+LOGO
+------------------------------------------------------------
+Filename:     logo.png (or logo.jpg)
+Page:         All pages (nav + footer)
+What to show: The Refined Detailing logo — the car silhouette
+              with chrome/blue gradient text. Use the version
+              provided against a transparent or dark background.
+Dimensions:   Min 300px wide, ideally 600px wide PNG with
+              transparent background for best results.
+Format:       PNG (transparent background preferred)
+Tips:         Export as PNG-24 for transparency support.
+              Avoid compressing the logo — keep it crisp.
+
+------------------------------------------------------------
+HOME PAGE
+------------------------------------------------------------
+
+home-banner.jpg
+  Page:       index.html — Hero background
+  Content:    A dramatic, dark shot of a glossy sports car or
+              performance car being detailed. Could be a close-up
+              of a panel with deep reflection, or a full car shot
+              from a low angle with moody lighting.
+              Alternatively: a dark driveway with a vehicle and
+              the detailer in action.
+  Dimensions: 1920 x 1080px minimum (1920 x 1200px ideal)
+  Format:     JPG
+  Tips:       Compress to under 300KB using squoosh.app.
+              Use a dark image — the hero overlay sits on top,
+              so a bright photo will look washed out.
+
+about-team.jpg
+  Page:       index.html — About section
+  Content:    The detailer at work. Hands-on shot — applying
+              product, using a machine polisher, wiping down a
+              panel, or holding a spray bottle. Real, natural
+              feel. Not posed. Should feel like a genuine job shot.
+  Dimensions: 800 x 1000px (portrait ratio 4:5)
+  Format:     JPG
+  Tips:       Compress to under 200KB. Soft natural light works
+              best here. Avoid direct flash.
+
+------------------------------------------------------------
+SERVICES PAGE
+------------------------------------------------------------
+
+services-fulldetail.jpg
+  Page:       services.html — Full Detail card
+  Content:    A car that looks completely fresh — ideally a full
+              or 3/4 shot of a clean vehicle after a full detail.
+              Dark vehicle preferred. Show the shine.
+  Dimensions: 900 x 506px (16:9 ratio)
+  Format:     JPG
+  Tips:       Compress to under 180KB. squoosh.app recommended.
+
+services-presale.jpg
+  Page:       services.html — Pre-Sale Detail card
+  Content:    A car that looks market-ready. Clean, shiny, well-lit.
+              Could be a front 3/4 angle like a car ad. The kind
+              of shot you'd post on Carsales.
+  Dimensions: 900 x 506px (16:9 ratio)
+  Format:     JPG
+  Tips:       Compress to under 180KB.
+
+services-exterior.jpg
+  Page:       services.html — Exterior Detail card
+  Content:    Close-up of paint surface showing gloss and reflection.
+              A panel shot, bonnet, or door works well. Deep colour,
+              well-lit.
+  Dimensions: 900 x 506px (16:9 ratio)
+  Format:     JPG
+  Tips:       Compress to under 180KB.
+
+services-interior.jpg
+  Page:       services.html — Interior Detail card
+  Content:    Clean car interior — dashboard, steering wheel and
+              seats visible. Tidy, fresh-looking. A wide angle from
+              outside the open door works well.
+  Dimensions: 900 x 506px (16:9 ratio)
+  Format:     JPG
+  Tips:       Compress to under 180KB.
+
+------------------------------------------------------------
+GALLERY PAGE
+------------------------------------------------------------
+
+gallery-exterior1.jpg
+  Page:       gallery.html
+  Category:   Exterior
+  Content:    Close-up of a glossy panel reflecting sunlight or
+              sky after polish. Show the depth of the paint.
+  Dimensions: 800 x 600px
+  Format:     JPG
+  Tips:       Compress to under 150KB.
+
+gallery-exterior2.jpg
+  Page:       gallery.html
+  Category:   Exterior
+  Content:    Rear or 3/4 view of a dark SUV freshly washed.
+              Shiny wheels. Clean arches. Looking sharp.
+  Dimensions: 800 x 600px
+  Format:     JPG
+  Tips:       Compress to under 150KB.
+
+gallery-exterior3.jpg
+  Page:       gallery.html
+  Category:   Exterior
+  Content:    Wheel arch and alloy wheel cleaned and dressed.
+              Close up, show detail in the spokes and tyre shine.
+  Dimensions: 800 x 600px
+  Format:     JPG
+  Tips:       Compress to under 150KB.
+
+gallery-interior1.jpg
+  Page:       gallery.html
+  Category:   Interior
+  Content:    Dashboard and centre console clean and treated.
+              No dust, no smears, no rubbish. Modern car preferred.
+  Dimensions: 800 x 600px
+  Format:     JPG
+  Tips:       Compress to under 150KB.
+
+gallery-interior2.jpg
+  Page:       gallery.html
+  Category:   Interior
+  Content:    Leather or fabric seats clean and treated.
+              Overhead or side-on view of the front seats.
+  Dimensions: 800 x 600px
+  Format:     JPG
+  Tips:       Compress to under 150KB.
+
+gallery-interior3.jpg
+  Page:       gallery.html
+  Category:   Interior
+  Content:    Boot/trunk vacuumed and clean. Floor mats fresh.
+              Could also be rear footwells.
+  Dimensions: 800 x 600px
+  Format:     JPG
+  Tips:       Compress to under 150KB.
+
+gallery-paint1.jpg
+  Page:       gallery.html
+  Category:   Paint
+  Content:    Machine polisher being used on a dark vehicle.
+              Or a split before/after shot showing swirl marks
+              removed from one side. Very satisfying photo type.
+  Dimensions: 800 x 600px
+  Format:     JPG
+  Tips:       Compress to under 150KB.
+
+gallery-paint2.jpg
+  Page:       gallery.html
+  Category:   Paint
+  Content:    Close-up of clear paint surface after machine polish.
+              Deep, wet-looking gloss. Can see reflection clearly.
+  Dimensions: 800 x 600px
+  Format:     JPG
+  Tips:       Compress to under 150KB.
+
+gallery-presale1.jpg
+  Page:       gallery.html
+  Category:   Pre-Sale
+  Content:    Full car shot looking market-ready. Front or 3/4 angle.
+              The kind of photo that sells a car online.
+  Dimensions: 800 x 600px
+  Format:     JPG
+  Tips:       Compress to under 150KB.
+
+------------------------------------------------------------
+SOCIAL ICONS (optional — used in footer/contact)
+------------------------------------------------------------
+
+facebook-logo.jpg (or .svg)
+  Note:       Currently using inline SVG icons — no image file
+              needed unless you want to use branded social buttons.
+  If used:    Standard Facebook logo on dark background
+  Dimensions: 40 x 40px
+  Format:     PNG (transparent) or SVG preferred
+
+instagram-logo.jpg (or .svg)
+  Note:       Currently using inline SVG icons — no image file
+              needed unless you want to use branded social buttons.
+  If used:    Standard Instagram gradient logo
+  Dimensions: 40 x 40px
+  Format:     PNG (transparent) or SVG preferred
+
+------------------------------------------------------------
+COMPRESSION & OPTIMISATION TOOLS
+------------------------------------------------------------
+squoosh.app         — Google's free browser-based image compressor.
+                      Best for JPG and WebP conversion. Use "MozJPEG"
+                      at 80–85 quality for great balance.
+
+tinyjpg.com         — Drag and drop JPG/PNG compression. Fast and easy.
+
+imageresizer.com    — Quick resize before compressing.
+
+TIP: Convert JPGs to WebP format where possible for 25–35% smaller
+file sizes with no visible quality loss. The site is coded to support
+standard JPG/PNG — if you switch to WebP, just update the src
+attributes in the HTML accordingly.
+
+------------------------------------------------------------
+REPLACE PEXELS IMAGES ASAP
+------------------------------------------------------------
+The site currently loads images from Pexels as temporary placeholders.
+These are royalty-free but generic — they're not your actual work.
+
+Your own before/after shots will:
+- Build trust faster than stock photos
+- Show your real standard of work
+- Perform better for local SEO (geotagged images help)
+
+Even 6–8 real job photos makes a huge difference.
+
+Filename comments are included in each HTML file as:
+<!-- PLACEHOLDER: filename.jpg -->
+so you or your AI can quickly find and replace each one.
+
+============================================================
+END OF IMAGE GUIDE
+============================================================
