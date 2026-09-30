@@ -1,12 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-AU">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#000000">
 <title>Mobile Car Detailing Logan | Refined Detailing</title>
 <meta name="description" content="Mobile car detailing and ceramic coating in Holmview and Logan. Fixed price shown before you book, no deposit, pay after you inspect the car, free redo within 7 days.">
-<meta name="theme-color" content="#000000">
-<link rel="icon" type="image/png" href="images/favicon.png">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Refined Detailing">
 <meta property="og:title" content="Mobile Car Detailing Logan | Refined Detailing">
@@ -19,11 +19,10 @@
 <meta name="twitter:title" content="Mobile Car Detailing Logan | Refined Detailing">
 <meta name="twitter:description" content="Mobile car detailing and ceramic coating in Holmview and Logan. Fixed price shown before you book, no deposit, pay after you inspect the car, free redo within 7 days.">
 <meta name="twitter:image" content="images/og-image.jpg">
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,700;125,800&family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
-<script src="main.js" defer></script>
-</head>
-<body>
+<script src="main.js"></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -86,360 +85,545 @@
   ]
 }
 </script>
-<a class="skip" href="#main">Skip to content</a>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
 <header class="site-header">
-  <div class="wrap header-row">
-    <a class="brand" href="index.html"><img src="images/logo.png" width="914" height="514" alt="Refined Detailing"></a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu"><span class="nav-bars" aria-hidden="true"></span></button>
-    <nav class="site-nav" id="site-nav" aria-label="Main">
-      <ul>
-        <li><a href="book.html">Prices and booking</a></li>
-        <li><a href="ceramic-coating.html">Ceramic coating</a></li>
-        <li><a href="index.html#why">Why us</a></li>
-        <li><a href="gloss-club.html">Gloss Club</a></li>
-        <li><a href="index.html#faq">Questions</a></li>
-      </ul>
-      <div class="nav-cta">
-        <a class="nav-phone" href="tel:0444546092">0444 546 092</a>
-        <a class="btn btn-primary" href="book.html">Book now</a>
-      </div>
-    </nav>
-  </div>
+  <a class="site-header__logo" href="index.html">
+    <img src="images/logo.png" alt="Refined Detailing" width="914" height="514">
+  </a>
+
+  <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle menu">
+    <span class="nav-toggle__bars"></span>
+  </button>
+
+  <nav class="site-nav" id="site-nav" aria-label="Primary">
+    <ul class="site-nav__links">
+      <li><a href="book.html">Prices &amp; Booking</a></li>
+      <li><a href="ceramic-coating.html">Ceramic Coating</a></li>
+      <li><a href="index.html#why">Why Us</a></li>
+      <li><a href="gloss-club.html">Gloss Club</a></li>
+    </ul>
+    <div class="site-nav__actions">
+      <a class="btn btn-primary" href="book.html">Book a Detail <span class="btn-arrow" aria-hidden="true">&rarr;</span></a>
+      <span class="site-nav__divider" aria-hidden="true">|</span>
+      <a class="site-nav__phone" href="tel:0444546092">0444 546 092</a>
+    </div>
+  </nav>
 </header>
 
 <main id="main">
 
-  <section class="hero" aria-labelledby="hero-title">
-    <div class="wrap hero-grid">
-      <div class="hero-copy">
-        <p class="eyebrow">Mobile detailing and ceramic coating</p>
-        <h1 id="hero-title">We come to you. We don't leave until it's perfect.</h1>
-        <p class="lede">Mobile car detailing and ceramic coating across Logan and surrounding areas. You get a fixed price before we arrive, a free redo if we miss anything, and you pay only after you've inspected the car.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary btn-lg" href="book.html">Price and book your detail</a>
-          <a class="btn btn-ghost btn-lg" href="tel:0444546092">or call 0444 546 092</a>
+  <!-- Hero: scroll-scrubbed video. PLACEHOLDER MEDIA: swap images/hero-amg-c63s.jpg (poster) and videos/hero-orbit.mp4, keep the file names. -->
+  <section class="hero-cinema" id="heroCinema" aria-label="Introduction">
+    <div class="hero-cinema__pin">
+      <img class="hero-cinema__media" id="heroPoster" src="images/hero-amg-c63s.jpg" alt="Dark coupe parked in a garage lit with red light, camera orbiting the car" width="1920" height="1080" loading="eager" fetchpriority="high">
+      <video class="hero-cinema__media hero-cinema__media--video" id="heroVideo" muted playsinline preload="none" aria-hidden="true"></video>
+      <div class="hero-cinema__scrim" aria-hidden="true"></div>
+
+      <div class="hero-cinema__content hero-cinema__content--start" id="heroContentStart">
+        <div class="hero__eyebrow">
+          <span class="bar" aria-hidden="true"></span>
+          <span class="label">Mobile Detailing, Logan</span>
+        </div>
+        <h1 class="hero__title">We come to you.<span class="accent">We don't leave until it's perfect.</span></h1>
+        <div class="hero__rule" aria-hidden="true"></div>
+        <p class="hero__lede">Mobile car detailing and ceramic coating across Logan and surrounding areas. You get a fixed price before we arrive, a free redo if we miss anything, and you pay only after you've inspected the car.</p>
+        <div class="hero__ctas">
+          <a class="btn btn-primary" href="book.html">Price and book your detail <span class="btn-arrow" aria-hidden="true">&rarr;</span></a>
+          <a class="btn btn-secondary" href="tel:0444546092">Or call 0444 546 092</a>
+        </div>
+        <div class="hero__meta">
+          <span>Fixed price</span><span aria-hidden="true">&middot;</span><span>No deposit</span><span aria-hidden="true">&middot;</span><span>Free redo within 7 days</span>
         </div>
       </div>
-      <div class="hero-mark">
-        <img class="hero-logo" src="images/logo.png" width="914" height="514" alt="Refined Detailing logo: a chrome sports car with a blue light streak along the body">
+
+      <div class="hero-cinema__content hero-cinema__content--end" id="heroContentEnd">
+        <div class="hero__eyebrow">
+          <span class="bar" aria-hidden="true"></span>
+          <span class="label">Refined Detailing</span>
+        </div>
+        <h2 class="hero__title">We take the risk. You take the keys.</h2>
+        <div class="hero__rule" aria-hidden="true"></div>
+        <p class="hero__lede">A fixed price shown before you book, no deposit, and a free redo if we miss anything. You pay after you've inspected the car.</p>
+        <div class="hero__ctas">
+          <a class="btn btn-primary" href="book.html">Price and book your detail <span class="btn-arrow" aria-hidden="true">&rarr;</span></a>
+        </div>
       </div>
     </div>
-    <ul class="wrap proof">
-      <li><strong>Fixed price</strong><span>shown before you book</span></li>
-      <li><strong>Free redo</strong><span>if you spot a miss within 7 days</span></li>
-      <li><strong>No deposit</strong><span>pay after you inspect the car</span></li>
-    </ul>
   </section>
+
+  <div class="trust-strip">
+    <div class="trust-strip__inner">
+      <div class="trust-item"><span class="bar" aria-hidden="true"></span><strong>Fixed price</strong><span>shown before you book</span></div>
+      <div class="trust-item"><span class="bar" aria-hidden="true"></span><strong>Free redo</strong><span>if you spot a miss within 7 days</span></div>
+      <div class="trust-item"><span class="bar" aria-hidden="true"></span><strong>No deposit</strong><span>pay after you inspect the car</span></div>
+    </div>
+  </div>
 
   <!-- TODO: real before/after photos from client -->
   <!-- To switch this on, fill in data-before and data-after with the two image paths (and optionally data-before-webp, data-after-webp, data-before-alt, data-after-alt). It stays hidden until both are set. -->
-  <section class="band band-graphite ba" id="before-after" aria-labelledby="ba-title" data-ba data-before="" data-after="" hidden>
-    <div class="wrap">
-      <h2 id="ba-title">Drag to see what a proper detail does.</h2>
+  <section class="section section--alt is-reveal" id="before-after" aria-labelledby="ba-title" data-ba data-before="" data-after="" hidden>
+    <div class="section__inner">
+      <div class="section-heading section-heading--stacked">
+        <div class="section-heading__eyebrow">
+            <span class="bar" aria-hidden="true"></span>
+            <span class="label">Before And After</span>
+          </div>
+        <h2 class="section-heading__title" id="ba-title">Drag to see what a proper detail does.</h2>
+      </div>
       <div class="ba-stage" data-ba-stage></div>
     </div>
   </section>
 
-  <section class="band band-graphite" id="how" aria-labelledby="how-title">
-    <div class="wrap">
-      <p class="eyebrow">How it works</p>
-      <h2 id="how-title" data-reveal>Price it, book it, inspect it, then pay.</h2>
-      <ol class="steps">
-        <li data-reveal>
-          <h3>Price it and book it</h3>
-          <p>Pick your vehicle and package. Your price updates as you go, and that's the price you pay.</p>
-        </li>
-        <li data-reveal>
-          <h3>We arrive ready to work</h3>
-          <p>We text you when we're on our way, then work at your home or workplace with our own gear. You don't need to be there.</p>
-        </li>
-        <li data-reveal>
-          <h3>Inspect it, then pay</h3>
-          <p>We send before and after photos. You check the car and pay when you're happy. Spot a miss within 7 days and we'll fix it free.</p>
-        </li>
-      </ol>
-    </div>
-  </section>
+  <section class="section is-reveal" id="prices" aria-labelledby="prices-heading">
+    <div class="section__inner">
+      <div class="section-heading">
+        <div>
+          <div class="section-heading__eyebrow">
+            <span class="bar" aria-hidden="true"></span>
+            <span class="label">Prices</span>
+          </div>
+          <h2 class="section-heading__title" id="prices-heading">Twelve packages. One fixed price each.</h2>
+        </div>
+        <p class="section-heading__description">Prices shown are for a hatch, sedan or coupe. Pick your vehicle on the booking page and the price for your exact car appears.</p>
+      </div>
 
-  <section class="band band-light" id="prices" aria-labelledby="prices-title">
-    <div class="wrap">
-      <p class="eyebrow">Prices</p>
-      <h2 id="prices-title" data-reveal>Twelve packages. One fixed price each.</h2>
-      <p class="section-lede" data-reveal>Prices below are for a hatch, sedan or coupe. Pick your vehicle on the booking page and the price for your exact car appears. Everything includes GST and travel to your door.</p>
-      <div class="pkg-group" data-reveal>
-        <div class="pkg-group-head">
-          <h3>Clean it up</h3>
-          <p>Keep a clean car clean, or reset the inside.</p>
-        </div>
-        <ul class="pkg-grid">
-          <li class="pkg-card">
-            <h4><a href="book.html#pkg=express">Express Wash</a></h4>
-            
-            <p class="pkg-blurb">A quick hand wash and vacuum to keep a clean car clean.</p>
-            <p class="pkg-price"><span class="pkg-from">from</span> <span data-price="express">$79</span></p>
-          </li>
-          <li class="pkg-card">
-            <h4><a href="book.html#pkg=refresh">Exterior Refresh</a></h4>
-            
-            <p class="pkg-blurb">Deep clean and decontamination for the outside of the car.</p>
-            <p class="pkg-price"><span class="pkg-from">from</span> <span data-price="refresh">$129</span></p>
-          </li>
-          <li class="pkg-card">
-            <h4><a href="book.html#pkg=interior">Interior Reset</a></h4>
-            
-            <p class="pkg-blurb">Every surface inside cleaned, freshened and protected.</p>
-            <p class="pkg-price"><span class="pkg-from">from</span> <span data-price="interior">$169</span></p>
-          </li>
-        </ul>
-      </div>
-      <div class="pkg-group" data-reveal>
-        <div class="pkg-group-head">
-          <h3>Full detail</h3>
-          <p>Inside and out, in one visit.</p>
-        </div>
-        <ul class="pkg-grid">
-          <li class="pkg-card">
-            <h4><a href="book.html#pkg=signature">Signature Detail</a></h4>
-            <span class="chip">Best value</span>
-            <p class="pkg-blurb">Inside and out, in one visit. Our most complete everyday detail.</p>
-            <p class="pkg-price"><span class="pkg-from">from</span> <span data-price="signature">$299</span></p>
-          </li>
-          <li class="pkg-card">
-            <h4><a href="book.html#pkg=showroom">Showroom Detail</a></h4>
-            <span class="chip">Full works</span>
-            <p class="pkg-blurb">Signature plus a machine polish for gloss you can see.</p>
-            <p class="pkg-price"><span class="pkg-from">from</span> <span data-price="showroom">$449</span></p>
-          </li>
-        </ul>
-      </div>
-      <div class="pkg-group" data-reveal>
-        <div class="pkg-group-head">
-          <h3>Selling or trading in</h3>
-          <p>Look your best in photos and on inspection.</p>
-        </div>
-        <ul class="pkg-grid">
-          <li class="pkg-card">
-            <h4><a href="book.html#pkg=sellready">Sell-Ready Detail</a></h4>
-            <span class="chip">Built to sell</span>
-            <p class="pkg-blurb">Make your car look its best in photos and on inspection.</p>
-            <p class="pkg-price"><span class="pkg-from">from</span> <span data-price="sellready">$349</span></p>
-          </li>
-        </ul>
-      </div>
-      <div class="pkg-group" data-reveal>
-        <div class="pkg-group-head">
-          <h3>Correct the paint</h3>
-          <p>For dull, swirly paint.</p>
-        </div>
-        <ul class="pkg-grid">
-          <li class="pkg-card">
-            <h4><a href="book.html#pkg=gloss">Gloss Enhancement</a></h4>
-            
-            <p class="pkg-blurb">One-stage polish that lifts light swirls and brings the shine back.</p>
-            <p class="pkg-price"><span class="pkg-from">from</span> <span data-price="gloss">$390</span></p>
-          </li>
-          <li class="pkg-card">
-            <h4><a href="book.html#pkg=correction">Paint Correction</a></h4>
-            
-            <p class="pkg-blurb">Two-stage correction for cars with noticeable swirls and marks.</p>
-            <p class="pkg-price"><span class="pkg-from">from</span> <span data-price="correction">$690</span></p>
-          </li>
-        </ul>
-      </div>
-      <div class="pkg-group" data-reveal>
-        <div class="pkg-group-head">
-          <h3>Ceramic coating</h3>
-          <p>Long-term protection. Two, five or eight years.</p>
-        </div>
-        <ul class="pkg-grid">
-          <li class="pkg-card">
-            <h4><a href="book.html#pkg=ceramic2">Ceramic Coating, 2-year</a></h4>
-            
-            <p class="pkg-blurb">Entry-level protection with a proper polish underneath.</p>
-            <p class="pkg-price"><span class="pkg-from">from</span> <span data-price="ceramic2">$690</span></p>
-          </li>
-          <li class="pkg-card">
-            <h4><a href="book.html#pkg=ceramic5">Ceramic Coating, 5-year</a></h4>
-            <span class="chip">Best balance</span>
-            <p class="pkg-blurb">The sweet spot of durability and price for most owners.</p>
-            <p class="pkg-price"><span class="pkg-from">from</span> <span data-price="ceramic5">$1,090</span></p>
-          </li>
-          <li class="pkg-card">
-            <h4><a href="book.html#pkg=ceramic8">Ceramic Coating, 8-year</a></h4>
-            
-            <p class="pkg-blurb">Our toughest system, for cars you plan to keep.</p>
-            <p class="pkg-price"><span class="pkg-from">from</span> <span data-price="ceramic8">$1,590</span></p>
-          </li>
-        </ul>
-      </div>
-      <div class="pkg-group" data-reveal>
-        <div class="pkg-group-head">
-          <h3>Motorbike</h3>
-          <p>Bikes have their own price.</p>
-        </div>
-        <ul class="pkg-grid">
-          <li class="pkg-card">
-            <h4><a href="book.html#pkg=bikefull">Motorbike Full Detail</a></h4>
-            
-            <p class="pkg-blurb">Wash, decontaminate, polish and protect your bike.</p>
-            <p class="pkg-price"><span class="pkg-from">bikes only</span> <span data-price="bikefull" data-size="b">$159</span></p>
-          </li>
-        </ul>
-      </div>
-      <p class="section-cta" data-reveal><a class="btn btn-dark" href="book.html">Price your exact car</a></p>
-    </div>
-  </section>
-
-  <section class="band band-void" id="qld" aria-labelledby="qld-title">
-    <div class="wrap">
-      <p class="eyebrow">Local conditions</p>
-      <h2 id="qld-title" data-reveal>South-east Queensland is hard on paint. Here's how we deal with it.</h2>
-      <div class="threats">
-        <article class="threat" data-reveal>
-          <p class="threat-label">Sun</p>
-          <h3>Summer UV and heat</h3>
-          <p>Clear coat fades and chalks under our sun. A sealant or ceramic coating takes the punishment instead of your paint.</p>
-          <a class="text-link" href="ceramic-coating.html">See ceramic coating</a>
+      <div class="services-grid">
+        <article class="service-card">
+          <div class="service-card__media">
+            <img src="images/exterior-wash-porsche-gloss.jpg" alt="Freshly washed black convertible under a carport, paint reflecting the roofline" loading="lazy" width="900" height="1200">
+            <span class="service-card__index">01<span class="bar" aria-hidden="true"></span></span>
+          </div>
+          <div class="service-card__body">
+            <h3 class="service-card__title">Clean it up <span class="service-card__price"><small>from</small><span data-price="express">$79</span></span></h3>
+            <p class="service-card__desc">Express Wash, Exterior Refresh and Interior Reset. Keep a clean car clean, or reset the inside.</p>
+            <a class="service-card__link" href="book.html#pkg=express">Price It <span aria-hidden="true">&rarr;</span></a>
+          </div>
         </article>
-        <article class="threat" data-reveal>
-          <p class="threat-label">Mud and sap</p>
-          <h3>Storm mud and tree sap</h3>
-          <p>It bakes in and dulls the finish. Clay decontamination lifts it, and a sealant makes the next wash quicker.</p>
-          <a class="text-link" href="book.html#pkg=refresh">See Exterior Refresh</a>
+        <article class="service-card">
+          <div class="service-card__media">
+            <img src="images/interior-deep-clean-porsche-dash.jpg" alt="Clean sports car cockpit with dashboard and steering wheel detailed" loading="lazy" width="900" height="1200">
+            <span class="service-card__index">02<span class="bar" aria-hidden="true"></span></span>
+          </div>
+          <div class="service-card__body">
+            <h3 class="service-card__title">Full detail <span class="service-card__price"><small>from</small><span data-price="signature">$299</span></span></h3>
+            <p class="service-card__desc">Signature and Showroom Detail. Inside and out in one visit, with a machine polish on Showroom.</p>
+            <a class="service-card__link" href="book.html#pkg=signature">Price It <span aria-hidden="true">&rarr;</span></a>
+          </div>
         </article>
-        <article class="threat" data-reveal>
-          <p class="threat-label">Damp</p>
-          <h3>Humidity and mould</h3>
-          <p>Damp carpets and trim turn musty. We treat trim, carpets and seats for mould, then dry them out.</p>
-          <a class="text-link" href="book.html#pkg=interior&amp;extras=mould">See Interior Reset with mould treatment</a>
+        <article class="service-card">
+          <div class="service-card__media">
+            <img src="images/refined-garage-mercedes.jpg" alt="White Mercedes coupe with the door open in a home garage during a detail" loading="lazy" width="900" height="1200">
+            <span class="service-card__index">03<span class="bar" aria-hidden="true"></span></span>
+          </div>
+          <div class="service-card__body">
+            <h3 class="service-card__title">Selling or trading in <span class="service-card__price"><small>from</small><span data-price="sellready">$349</span></span></h3>
+            <p class="service-card__desc">Sell-Ready Detail. Make your car look its best in photos and on inspection.</p>
+            <a class="service-card__link" href="book.html#pkg=sellready">Price It <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </article>
+        <article class="service-card">
+          <div class="service-card__media">
+            <img src="images/refined-paint-closeup.jpg" alt="Close-up of a black car door with deep gloss reflecting the evening sky" loading="lazy" width="900" height="1200">
+            <span class="service-card__index">04<span class="bar" aria-hidden="true"></span></span>
+          </div>
+          <div class="service-card__body">
+            <h3 class="service-card__title">Correct the paint <span class="service-card__price"><small>from</small><span data-price="gloss">$390</span></span></h3>
+            <p class="service-card__desc">Gloss Enhancement and Paint Correction for dull, swirly paint.</p>
+            <a class="service-card__link" href="book.html#pkg=gloss">Price It <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </article>
+        <article class="service-card">
+          <div class="service-card__media">
+            <img src="images/ceramic-coating-porsche-rear-gloss.jpg" alt="Rear of a black convertible with a glossy finish under a carport" loading="lazy" width="900" height="1200">
+            <span class="service-card__index">05<span class="bar" aria-hidden="true"></span></span>
+          </div>
+          <div class="service-card__body">
+            <h3 class="service-card__title">Ceramic coating <span class="service-card__price"><small>from</small><span data-price="ceramic2">$690</span></span></h3>
+            <p class="service-card__desc">Two, five or eight-year coatings, with a proper polish underneath.</p>
+            <a class="service-card__link" href="ceramic-coating.html">Price It <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </article>
+        <article class="service-card">
+          <div class="service-card__media">
+            <img src="images/paint-protection-polisher-action-poster.jpg" alt="Detailer machine polishing a panel" loading="lazy" width="900" height="1200">
+            <span class="service-card__index">06<span class="bar" aria-hidden="true"></span></span>
+          </div>
+          <div class="service-card__body">
+            <h3 class="service-card__title">Motorbike <span class="service-card__price"><small>bikes</small><span data-price="bikefull" data-size="b">$159</span></span></h3>
+            <p class="service-card__desc">Motorbike Full Detail. Wash, decontaminate, polish and protect your bike.</p>
+            <a class="service-card__link" href="book.html#pkg=bikefull">Price It <span aria-hidden="true">&rarr;</span></a>
+          </div>
         </article>
       </div>
     </div>
   </section>
 
-  <section class="band band-graphite" id="why" aria-labelledby="why-title">
-    <div class="wrap why-grid">
-      <div class="why-copy" data-reveal>
-        <p class="eyebrow">Why us</p>
-        <h2 id="why-title">We take the risk. You take the keys.</h2>
-        <p class="section-lede">The price is fixed and shown before you book. You pay after you've inspected the car, with no deposit. If we miss something, we come back and fix it free.</p>
+  <section class="section section--alt is-reveal" aria-labelledby="all-prices-heading">
+    <div class="section__inner">
+      <div class="section-heading section-heading--stacked">
+        <div class="section-heading__eyebrow">
+            <span class="bar" aria-hidden="true"></span>
+            <span class="label">Every Price</span>
+          </div>
+        <h2 class="section-heading__title" id="all-prices-heading">All twelve, in one place.</h2>
       </div>
-      <table class="compare" data-reveal>
+      <div class="price-groups">
+        <div class="price-group">
+          <h3 class="price-group__title">Clean it up</h3>
+          <ul class="price-list">
+          <li class="price-row">
+            <span class="price-row__name"><a href="book.html#pkg=express">Express Wash</a></span>
+            <span class="price-row__blurb">A quick hand wash and vacuum to keep a clean car clean.</span>
+            <span class="price-row__price"><small>from</small><span data-price="express">$79</span></span>
+          </li>
+          <li class="price-row">
+            <span class="price-row__name"><a href="book.html#pkg=refresh">Exterior Refresh</a></span>
+            <span class="price-row__blurb">Deep clean and decontamination for the outside of the car.</span>
+            <span class="price-row__price"><small>from</small><span data-price="refresh">$129</span></span>
+          </li>
+          <li class="price-row">
+            <span class="price-row__name"><a href="book.html#pkg=interior">Interior Reset</a></span>
+            <span class="price-row__blurb">Every surface inside cleaned, freshened and protected.</span>
+            <span class="price-row__price"><small>from</small><span data-price="interior">$169</span></span>
+          </li>
+          </ul>
+        </div>
+        <div class="price-group">
+          <h3 class="price-group__title">Full detail</h3>
+          <ul class="price-list">
+          <li class="price-row">
+            <span class="price-row__name"><a href="book.html#pkg=signature">Signature Detail</a><span class="chip">Best value</span></span>
+            <span class="price-row__blurb">Inside and out, in one visit. Our most complete everyday detail.</span>
+            <span class="price-row__price"><small>from</small><span data-price="signature">$299</span></span>
+          </li>
+          <li class="price-row">
+            <span class="price-row__name"><a href="book.html#pkg=showroom">Showroom Detail</a><span class="chip">Full works</span></span>
+            <span class="price-row__blurb">Signature plus a machine polish for gloss you can see.</span>
+            <span class="price-row__price"><small>from</small><span data-price="showroom">$449</span></span>
+          </li>
+          </ul>
+        </div>
+        <div class="price-group">
+          <h3 class="price-group__title">Selling or trading in</h3>
+          <ul class="price-list">
+          <li class="price-row">
+            <span class="price-row__name"><a href="book.html#pkg=sellready">Sell-Ready Detail</a><span class="chip">Built to sell</span></span>
+            <span class="price-row__blurb">Make your car look its best in photos and on inspection.</span>
+            <span class="price-row__price"><small>from</small><span data-price="sellready">$349</span></span>
+          </li>
+          </ul>
+        </div>
+        <div class="price-group">
+          <h3 class="price-group__title">Correct the paint</h3>
+          <ul class="price-list">
+          <li class="price-row">
+            <span class="price-row__name"><a href="book.html#pkg=gloss">Gloss Enhancement</a></span>
+            <span class="price-row__blurb">One-stage polish that lifts light swirls and brings the shine back.</span>
+            <span class="price-row__price"><small>from</small><span data-price="gloss">$390</span></span>
+          </li>
+          <li class="price-row">
+            <span class="price-row__name"><a href="book.html#pkg=correction">Paint Correction</a></span>
+            <span class="price-row__blurb">Two-stage correction for cars with noticeable swirls and marks.</span>
+            <span class="price-row__price"><small>from</small><span data-price="correction">$690</span></span>
+          </li>
+          </ul>
+        </div>
+        <div class="price-group">
+          <h3 class="price-group__title">Ceramic coating</h3>
+          <ul class="price-list">
+          <li class="price-row">
+            <span class="price-row__name"><a href="book.html#pkg=ceramic2">Ceramic Coating, 2-year</a></span>
+            <span class="price-row__blurb">Entry-level protection with a proper polish underneath.</span>
+            <span class="price-row__price"><small>from</small><span data-price="ceramic2">$690</span></span>
+          </li>
+          <li class="price-row">
+            <span class="price-row__name"><a href="book.html#pkg=ceramic5">Ceramic Coating, 5-year</a><span class="chip">Best balance</span></span>
+            <span class="price-row__blurb">The sweet spot of durability and price for most owners.</span>
+            <span class="price-row__price"><small>from</small><span data-price="ceramic5">$1,090</span></span>
+          </li>
+          <li class="price-row">
+            <span class="price-row__name"><a href="book.html#pkg=ceramic8">Ceramic Coating, 8-year</a></span>
+            <span class="price-row__blurb">Our toughest system, for cars you plan to keep.</span>
+            <span class="price-row__price"><small>from</small><span data-price="ceramic8">$1,590</span></span>
+          </li>
+          </ul>
+        </div>
+        <div class="price-group">
+          <h3 class="price-group__title">Motorbike</h3>
+          <ul class="price-list">
+          <li class="price-row">
+            <span class="price-row__name"><a href="book.html#pkg=bikefull">Motorbike Full Detail</a></span>
+            <span class="price-row__blurb">Wash, decontaminate, polish and protect your bike.</span>
+            <span class="price-row__price"><small>bikes only</small><span data-price="bikefull" data-size="b">$159</span></span>
+          </li>
+          </ul>
+        </div>
+      </div>
+      <p class="price-disclaimer price-disclaimer--section">Everything includes GST and travel to your door. Estimated times depend on the condition of the vehicle. <a href="book.html">Price your exact car</a> for one fixed total.</p>
+    </div>
+  </section>
+
+  <section class="section is-reveal" id="how" aria-labelledby="how-heading">
+    <div class="section__inner">
+      <div class="section-heading section-heading--stacked">
+        <div class="section-heading__eyebrow">
+            <span class="bar" aria-hidden="true"></span>
+            <span class="label">How It Works</span>
+          </div>
+        <h2 class="section-heading__title" id="how-heading">Price it, book it, inspect it, then pay.</h2>
+      </div>
+      <div class="process-grid">
+        <div class="process-card">
+          <span class="process-card__num">01</span>
+          <h3 class="process-card__title">Price it and book it</h3>
+          <p class="process-card__desc">Pick your vehicle and package. Your price updates as you go, and that's the price you pay.</p>
+        </div>
+        <div class="process-card">
+          <span class="process-card__num">02</span>
+          <h3 class="process-card__title">We arrive ready to work</h3>
+          <p class="process-card__desc">We text you when we're on our way, then work at your home or workplace with our own gear. You don't need to be there.</p>
+        </div>
+        <div class="process-card">
+          <span class="process-card__num">03</span>
+          <h3 class="process-card__title">Inspect it, then pay</h3>
+          <p class="process-card__desc">We send before and after photos. You check the car and pay when you're happy. Spot a miss within 7 days and we'll fix it free.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery: two real Refined photos plus PLACEHOLDER tiles (swap the files, keep the names). -->
+  <section class="section section--alt is-reveal" aria-labelledby="gallery-heading">
+    <div class="section__inner">
+      <div class="section-heading">
+        <div>
+          <div class="section-heading__eyebrow">
+            <span class="bar" aria-hidden="true"></span>
+            <span class="label">The Finish</span>
+          </div>
+          <h2 class="section-heading__title" id="gallery-heading">Detailed at your door.</h2>
+        </div>
+        <p class="section-heading__description">Every job is done where the car lives: your driveway, garage or workplace.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <picture>
+            <source srcset="images/refined-garage-mercedes.webp" type="image/webp">
+            <img src="images/refined-garage-mercedes.jpg" alt="White Mercedes coupe with the door open in a home garage during a detail" loading="lazy" width="1080" height="1440">
+          </picture>
+          <span class="gallery-item__caption">Garage detail</span>
+        </div>
+        <div class="gallery-item">
+          <picture>
+            <source srcset="images/refined-paint-closeup.webp" type="image/webp">
+            <img src="images/refined-paint-closeup.jpg" alt="Close-up of a black car door with deep gloss reflecting the evening sky" loading="lazy" width="900" height="1600">
+          </picture>
+          <span class="gallery-item__caption">Paint finish</span>
+        </div>
+        <div class="gallery-item gallery-item--video">
+          <video class="autoplay-video" data-autoplay-src="videos/paint-protection-polisher-action.mp4" muted loop playsinline preload="none" poster="images/paint-protection-polisher-action-poster.jpg" aria-hidden="true" width="464" height="832"></video>
+          <span class="gallery-item__caption"><span class="dot" aria-hidden="true"></span>On the tools</span>
+        </div>
+        <div class="gallery-item">
+          <img src="images/gallery-porsche-interior-wide.jpg" alt="Open-top sports car interior after a detail" loading="lazy" width="788" height="1400">
+          <span class="gallery-item__caption">Interior</span>
+        </div>
+        <div class="gallery-item">
+          <img src="images/gallery-toyota-fortuner.jpg" alt="Dark SUV detailed in a driveway" loading="lazy" width="788" height="1400">
+          <span class="gallery-item__caption">SUV</span>
+        </div>
+        <div class="gallery-item">
+          <img src="images/gallery-bmw-night-detail.jpg" alt="Sports coupe after an evening detail under work lights" loading="lazy" width="788" height="1400">
+          <span class="gallery-item__caption">Evening finish</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section is-reveal" id="why" aria-labelledby="why-heading">
+    <div class="section__inner">
+      <div class="section-heading">
+        <div>
+          <div class="section-heading__eyebrow">
+            <span class="bar" aria-hidden="true"></span>
+            <span class="label">Why Refined Detailing</span>
+          </div>
+          <h2 class="section-heading__title" id="why-heading">We take the risk. You take the keys.</h2>
+        </div>
+        <p class="section-heading__description">The price is fixed and shown before you book. You pay after you've inspected the car, with no deposit. If we miss something, we come back and fix it free.</p>
+      </div>
+      <table class="compare">
         <caption>What you get here that you often don't elsewhere</caption>
         <thead>
-          <tr><th scope="col"><span class="sr-only">Topic</span></th><th scope="col">Refined Detailing</th><th scope="col">Often elsewhere</th></tr>
+          <tr><th scope="col"><span class="visually-hidden">Topic</span></th><th scope="col" class="is-us">Refined Detailing</th><th scope="col">Often elsewhere</th></tr>
         </thead>
         <tbody>
-          <tr><th scope="row">Price</th><td>Fixed and shown online</td><td>Often adjusted once they see the car</td></tr>
-          <tr><th scope="row">Payment</th><td>After you've inspected</td><td>Often a deposit up front</td></tr>
-          <tr><th scope="row">Arrival</th><td>A text when we're on our way</td><td>A wide window and silence</td></tr>
-          <tr><th scope="row">If we miss something</th><td>Free redo within 7 days</td><td>Sorted case by case</td></tr>
+          <tr><th scope="row">Price</th><td class="is-us">Fixed and shown online</td><td>Often adjusted once they see the car</td></tr>
+          <tr><th scope="row">Payment</th><td class="is-us">After you've inspected</td><td>Often a deposit up front</td></tr>
+          <tr><th scope="row">Arrival</th><td class="is-us">A text when we're on our way</td><td>A wide window and silence</td></tr>
+          <tr><th scope="row">If we miss something</th><td class="is-us">Free redo within 7 days</td><td>Sorted case by case</td></tr>
         </tbody>
       </table>
     </div>
   </section>
 
-  <section class="band band-light" id="club" aria-labelledby="club-title">
-    <div class="wrap">
-      <p class="eyebrow">Regulars and fleets</p>
-      <h2 id="club-title" data-reveal>Keep it clean every month, or keep a whole fleet clean.</h2>
-      <div class="duo">
-        <article class="duo-card" data-reveal>
-          <h3>Gloss Club</h3>
-          <p class="duo-price"><span data-club="s">$55</span> <span>a monthly wash</span></p>
-          <p>A monthly Express Wash on a small vehicle. Priority booking, pay after each wash, pause or cancel any time.</p>
-          <a class="btn btn-dark" href="gloss-club.html">See Gloss Club</a>
-        </article>
-        <article class="duo-card" data-reveal>
-          <h3>Dealerships and fleets</h3>
-          <p class="duo-price"><span>Volume pricing from 5 vehicles</span></p>
-          <p>The same crew every visit, regular scheduled runs or on-call, and one monthly invoice.</p>
-          <a class="btn btn-dark" href="gloss-club.html#fleet">Get a fleet quote</a>
-        </article>
+  <section class="section section--alt is-reveal" id="qld" aria-labelledby="qld-heading">
+    <div class="section__inner">
+      <div class="section-heading section-heading--stacked">
+        <div class="section-heading__eyebrow">
+            <span class="bar" aria-hidden="true"></span>
+            <span class="label">Local Conditions</span>
+          </div>
+        <h2 class="section-heading__title" id="qld-heading">South-east Queensland is hard on paint. Here's how we deal with it.</h2>
+      </div>
+      <div class="features-grid features-grid--three">
+        <div class="feature-card">
+          <span class="bar" aria-hidden="true"></span>
+          <span class="feature-card__label">Sun</span>
+          <h3 class="feature-card__title">Summer UV and heat</h3>
+          <p class="feature-card__desc">Clear coat fades and chalks under our sun. A sealant or ceramic coating takes the punishment instead of your paint.</p>
+          <a class="feature-card__link" href="ceramic-coating.html">See ceramic coating &rarr;</a>
+        </div>
+        <div class="feature-card">
+          <span class="bar" aria-hidden="true"></span>
+          <span class="feature-card__label">Mud and sap</span>
+          <h3 class="feature-card__title">Storm mud and tree sap</h3>
+          <p class="feature-card__desc">It bakes in and dulls the finish. Clay decontamination lifts it, and a sealant makes the next wash quicker.</p>
+          <a class="feature-card__link" href="book.html#pkg=refresh">See Exterior Refresh &rarr;</a>
+        </div>
+        <div class="feature-card">
+          <span class="bar" aria-hidden="true"></span>
+          <span class="feature-card__label">Damp</span>
+          <h3 class="feature-card__title">Humidity and mould</h3>
+          <p class="feature-card__desc">Damp carpets and trim turn musty. We treat trim, carpets and seats for mould, then dry them out.</p>
+          <a class="feature-card__link" href="book.html#pkg=interior&amp;extras=mould">See Interior Reset with mould treatment &rarr;</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="band band-void" id="reviews" aria-labelledby="reviews-title">
-    <div class="wrap reviews">
-      <div data-reveal>
-        <p class="eyebrow">Reviews</p>
-        <h2 id="reviews-title">Been detailed by us? Tell the next person.</h2>
+  <section class="section is-reveal" id="club" aria-labelledby="club-heading">
+    <div class="section__inner">
+      <div class="section-heading section-heading--stacked">
+        <div class="section-heading__eyebrow">
+            <span class="bar" aria-hidden="true"></span>
+            <span class="label">Regulars And Fleets</span>
+          </div>
+        <h2 class="section-heading__title" id="club-heading">Keep it clean every month, or keep a whole fleet clean.</h2>
       </div>
-      <div data-reveal>
-        <!-- TODO: link "Leave a Google review" once the real Google Business Profile URL is confirmed. No rating numbers until then. -->
-        <p>Leave a Google review after your detail. It's the best way to help someone in Logan decide who to trust with their car.</p>
-        <p class="reviews-note">We're building our reviews the honest way, one real customer at a time.</p>
+      <div class="compare-grid compare-grid--top">
+        <div class="compare-card compare-card--accent">
+          <h3 class="compare-card__title">Gloss Club</h3>
+          <p class="compare-card__price"><span data-club="s">$55</span><small>a monthly wash</small></p>
+          <p class="compare-card__text">A monthly Express Wash on a small vehicle. Priority booking, pay after each wash, pause or cancel any time.</p>
+          <a class="btn btn-primary" href="gloss-club.html">See Gloss Club <span class="btn-arrow" aria-hidden="true">&rarr;</span></a>
+        </div>
+        <div class="compare-card">
+          <h3 class="compare-card__title">Dealerships and fleets</h3>
+          <p class="compare-card__price"><small>Volume pricing from 5 vehicles</small></p>
+          <p class="compare-card__text">The same crew every visit, regular scheduled runs or on-call, and one monthly invoice.</p>
+          <a class="btn btn-secondary" href="gloss-club.html#fleet">Get a fleet quote <span class="btn-arrow" aria-hidden="true">&rarr;</span></a>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="band band-graphite" id="faq" aria-labelledby="faq-title">
-    <div class="wrap faq-wrap">
-      <div data-reveal>
-        <p class="eyebrow">Questions</p>
-        <h2 id="faq-title">Straight answers.</h2>
-        <p class="section-lede">Not covered here? Text or call <a class="text-link" href="tel:0444546092">0444 546 092</a>.</p>
+  <section class="section section--divider is-reveal" aria-labelledby="area-heading">
+    <div class="section__inner">
+      <div class="service-detail__inner">
+        <div>
+          <div class="section-heading__eyebrow">
+            <span class="bar" aria-hidden="true"></span>
+            <span class="label">Service Area</span>
+          </div>
+          <h2 class="section-heading__title" id="area-heading">We come to your door.</h2>
+          <p class="area-lede">Based in Holmview, servicing Logan and surrounding suburbs.</p>
+          <p class="area-note">Not on the list? Add your suburb when you book and we'll confirm we can reach you.</p>
+        </div>
+        <div class="area-panel">
+          <p class="area-panel__title">Suburbs we cover</p>
+          <ul class="area-list"><li>Holmview</li><li>Logan</li><li>Beenleigh</li><li>Waterford</li><li>Loganholme</li><li>Springwood</li><li>Browns Plains</li><li>Jimboomba</li><li>Yatala</li><li>Ormeau</li><li>Brisbane South</li></ul>
+        </div>
       </div>
-      <div class="faq" data-faq>
-      <div class="faq-item">
-        <h3><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a1">Do I need to be home?</button></h3>
-        <div class="faq-a" id="faq-a1"><p>No. Leave the car in your driveway or at your workplace and tell us where to find the key. We bring our own water and power, and we text you when we arrive and when we're done.</p></div>
-      </div>
-      <div class="faq-item">
-        <h3><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a2">How long will it take?</button></h3>
-        <div class="faq-a" id="faq-a2"><p>Your booking summary shows an estimate for your exact package and extras. Ceramic coating takes one to two days.</p></div>
-      </div>
-      <div class="faq-item">
-        <h3><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a3">What if it rains?</button></h3>
-        <div class="faq-a" id="faq-a3"><p>Under a carport or garage we can usually work under cover. Otherwise we move your booking to a new day at no charge.</p></div>
-      </div>
-      <div class="faq-item">
-        <h3><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a4">How does the free redo work?</button></h3>
-        <div class="faq-a" id="faq-a4"><p>Tell us within 7 days and we'll come back and fix it free. Stone chips, new damage and normal wear afterwards aren't covered.</p></div>
-      </div>
-      <div class="faq-item">
-        <h3><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a5">Will ceramic coating stop scratches?</button></h3>
-        <div class="faq-a" id="faq-a5"><p>No. It resists light marks and makes paint easier to clean, but it can't stop stone chips or deep scratches and it isn't a substitute for washing.</p></div>
-      </div>
-      <div class="faq-item">
-        <h3><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a6">Where do you work?</button></h3>
-        <div class="faq-a" id="faq-a6"><p>Logan and surrounding suburbs. Add your suburb when you book and we'll confirm.</p></div>
-      </div>
-    </div>
     </div>
   </section>
 
-  <section class="closing" aria-labelledby="closing-title">
-    <div class="wrap closing-inner">
-      <h2 id="closing-title">A car that looks this good, parked at your door.</h2>
-      <div class="hero-actions">
-        <a class="btn btn-primary btn-lg" href="book.html">Price and book your detail</a>
-        <a class="btn btn-ghost btn-lg" href="tel:0444546092">or call 0444 546 092</a>
+  <section class="section section--alt is-reveal" id="reviews" aria-labelledby="reviews-heading">
+    <div class="section__inner">
+      <div class="section-heading section-heading--stacked">
+        <div class="section-heading__eyebrow">
+            <span class="bar" aria-hidden="true"></span>
+            <span class="label">Reviews</span>
+          </div>
+        <h2 class="section-heading__title" id="reviews-heading">Been detailed by us? Tell the next person.</h2>
       </div>
+      <!-- TODO: link "Leave a Google review" once the real Google Business Profile URL is confirmed. No rating numbers until then. -->
+      <p class="area-lede">Leave a Google review after your detail. It's the best way to help someone in Logan decide who to trust with their car.</p>
+      <p class="reviews-note">We're building our reviews the honest way, one real customer at a time.</p>
+    </div>
+  </section>
+
+  <section class="section is-reveal" id="faq" aria-labelledby="faq-heading">
+    <div class="section__inner faq">
+      <div class="section-heading section-heading--stacked">
+        <div class="section-heading__eyebrow">
+            <span class="bar" aria-hidden="true"></span>
+            <span class="label">FAQ</span>
+          </div>
+        <h2 class="section-heading__title" id="faq-heading">Common questions.</h2>
+      </div>
+      <div class="faq-list" data-faq>
+        <div class="faq-item">
+          <h3 class="faq-item__q"><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a1">Do I need to be home?</button></h3>
+          <p class="faq-item__a" id="faq-a1">No. Leave the car in your driveway or at your workplace and tell us where to find the key. We bring our own water and power, and we text you when we arrive and when we're done.</p>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-item__q"><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a2">How long will it take?</button></h3>
+          <p class="faq-item__a" id="faq-a2">Your booking summary shows an estimate for your exact package and extras. Ceramic coating takes one to two days.</p>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-item__q"><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a3">What if it rains?</button></h3>
+          <p class="faq-item__a" id="faq-a3">Under a carport or garage we can usually work under cover. Otherwise we move your booking to a new day at no charge.</p>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-item__q"><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a4">How does the free redo work?</button></h3>
+          <p class="faq-item__a" id="faq-a4">Tell us within 7 days and we'll come back and fix it free. Stone chips, new damage and normal wear afterwards aren't covered.</p>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-item__q"><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a5">Will ceramic coating stop scratches?</button></h3>
+          <p class="faq-item__a" id="faq-a5">No. It resists light marks and makes paint easier to clean, but it can't stop stone chips or deep scratches and it isn't a substitute for washing.</p>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-item__q"><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a6">Where do you work?</button></h3>
+          <p class="faq-item__a" id="faq-a6">Logan and surrounding suburbs. Add your suburb when you book and we'll confirm.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--divider cta is-reveal" aria-labelledby="cta-heading">
+    <h2 class="cta__title" id="cta-heading">A car that looks this good, parked at your door.</h2>
+    <p class="cta__lede">Price your car, see one fixed total, then text to book.</p>
+    <div class="cta__actions">
+      <a class="btn btn-primary" href="book.html">Price and book your detail <span class="btn-arrow" aria-hidden="true">&rarr;</span></a>
+      <a class="btn btn-secondary" href="tel:0444546092">Or call 0444 546 092</a>
     </div>
   </section>
 
 </main>
 <footer class="site-footer">
-  <div class="wrap footer-grid">
-    <div class="foot-brand">
-      <img src="images/logo.png" width="914" height="514" alt="Refined Detailing logo" loading="lazy">
-      <p>Mobile car detailing and ceramic coating. Based in Holmview, servicing Logan and surrounding suburbs.</p>
+  <div class="site-footer__grid">
+    <div>
+      <img class="site-footer__logo" src="images/logo.png" alt="Refined Detailing logo" width="914" height="514" loading="lazy">
+      <p class="site-footer__blurb">Mobile car detailing and ceramic coating. Based in Holmview, servicing Logan and surrounding suburbs.</p>
     </div>
     <div>
-      <p class="foot-h">Call or text</p>
-      <p class="foot-phone"><a href="tel:0444546092">0444 546 092</a></p>
-      <p class="foot-small">Price your car on the booking page, then text to book.</p>
-    </div>
-    <div>
-      <p class="foot-h">Where we work</p>
-      <ul class="suburbs"><li>Holmview</li><li>Logan</li><li>Beenleigh</li><li>Waterford</li><li>Loganholme</li><li>Springwood</li><li>Browns Plains</li><li>Jimboomba</li><li>Yatala</li><li>Ormeau</li><li>Brisbane South</li></ul>
-      <p class="foot-small">Not on the list? Add your suburb when you book and we'll confirm.</p>
-    </div>
-    <div>
-      <p class="foot-h">On this site</p>
-      <ul class="foot-links">
+      <h3 class="site-footer__heading">Navigate</h3>
+      <ul class="site-footer__links">
         <li><a href="index.html">Home</a></li>
         <li><a href="book.html">Prices and booking</a></li>
         <li><a href="ceramic-coating.html">Ceramic coating</a></li>
@@ -447,10 +631,21 @@
         <li><a href="index.html#faq">Questions</a></li>
       </ul>
     </div>
+    <div>
+      <h3 class="site-footer__heading">Contact</h3>
+      <ul class="site-footer__links">
+        <li><a href="tel:0444546092">0444 546 092</a></li>
+      </ul>
+      <p class="site-footer__note">Price your car on the booking page, then text to book.</p>
+    </div>
+    <div>
+      <h3 class="site-footer__heading">Where we work</h3>
+      <ul class="site-footer__suburbs"><li>Holmview</li><li>Logan</li><li>Beenleigh</li><li>Waterford</li><li>Loganholme</li><li>Springwood</li><li>Browns Plains</li><li>Jimboomba</li><li>Yatala</li><li>Ormeau</li><li>Brisbane South</li></ul>
+      <p class="site-footer__note">Not on the list? Add your suburb when you book and we'll confirm.</p>
+    </div>
   </div>
-  <div class="wrap foot-legal">
-    <p>Prices include GST. Estimated times depend on the condition of the vehicle.</p>
-    <p>&copy; 2026 Refined Detailing</p>
+  <div class="site-footer__bottom">
+    <p>&copy; 2026 Refined Detailing. Prices include GST. Estimated times depend on the condition of the vehicle.</p>
   </div>
 </footer>
 </body>

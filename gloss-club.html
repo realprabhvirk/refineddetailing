@@ -1,12 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-AU">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#000000">
 <title>Gloss Club and Fleet Detailing | Refined Detailing</title>
 <meta name="description" content="Gloss Club is a monthly Express Wash with priority booking, pay after each wash, cancel any time. Fleet and dealership detailing with volume pricing from 5 vehicles.">
-<meta name="theme-color" content="#000000">
-<link rel="icon" type="image/png" href="images/favicon.png">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Refined Detailing">
 <meta property="og:title" content="Gloss Club and Fleet Detailing | Refined Detailing">
@@ -19,64 +19,71 @@
 <meta name="twitter:title" content="Gloss Club and Fleet Detailing | Refined Detailing">
 <meta name="twitter:description" content="Gloss Club is a monthly Express Wash with priority booking, pay after each wash, cancel any time. Fleet and dealership detailing with volume pricing from 5 vehicles.">
 <meta name="twitter:image" content="images/og-image.jpg">
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,700;125,800&family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
-<script src="main.js" defer></script>
+<script src="main.js"></script>
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
+<a class="skip-link" href="#main">Skip to content</a>
+
 <header class="site-header">
-  <div class="wrap header-row">
-    <a class="brand" href="index.html"><img src="images/logo.png" width="914" height="514" alt="Refined Detailing"></a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu"><span class="nav-bars" aria-hidden="true"></span></button>
-    <nav class="site-nav" id="site-nav" aria-label="Main">
-      <ul>
-        <li><a href="book.html">Prices and booking</a></li>
-        <li><a href="ceramic-coating.html">Ceramic coating</a></li>
-        <li><a href="index.html#why">Why us</a></li>
-        <li><a href="gloss-club.html" aria-current="page">Gloss Club</a></li>
-        <li><a href="index.html#faq">Questions</a></li>
-      </ul>
-      <div class="nav-cta">
-        <a class="nav-phone" href="tel:0444546092">0444 546 092</a>
-        <a class="btn btn-primary" href="book.html">Book now</a>
-      </div>
-    </nav>
-  </div>
+  <a class="site-header__logo" href="index.html">
+    <img src="images/logo.png" alt="Refined Detailing" width="914" height="514">
+  </a>
+
+  <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle menu">
+    <span class="nav-toggle__bars"></span>
+  </button>
+
+  <nav class="site-nav" id="site-nav" aria-label="Primary">
+    <ul class="site-nav__links">
+      <li><a href="book.html">Prices &amp; Booking</a></li>
+      <li><a href="ceramic-coating.html">Ceramic Coating</a></li>
+      <li><a href="index.html#why">Why Us</a></li>
+      <li><a href="gloss-club.html" aria-current="page">Gloss Club</a></li>
+    </ul>
+    <div class="site-nav__actions">
+      <a class="btn btn-primary" href="book.html">Book a Detail <span class="btn-arrow" aria-hidden="true">&rarr;</span></a>
+      <span class="site-nav__divider" aria-hidden="true">|</span>
+      <a class="site-nav__phone" href="tel:0444546092">0444 546 092</a>
+    </div>
+  </nav>
 </header>
 
 <main id="main">
 
-  <section class="page-head" aria-labelledby="page-title">
-    <div class="wrap">
-      <p class="eyebrow">Gloss Club</p>
-      <h1 id="page-title">A clean car every month, from <span data-club="s">$55</span>.</h1>
-      <p class="lede">A monthly Express Wash at a fixed member price. Priority booking, you pay after each wash, and you can pause or cancel any time.</p>
-      <div class="hero-actions">
-        <a class="btn btn-primary btn-lg" href="sms:0444546092?&body=Hi%20Refined%20Detailing%2C%20I%27d%20like%20to%20join%20Gloss%20Club.%0AVehicle%3A%20%0ASuburb%3A%20%0APreferred%20day%3A%20">Join Gloss Club</a>
-        <a class="btn btn-ghost btn-lg" href="book.html#pkg=express&amp;club=1">Price it for your car first</a>
-      </div>
-      <p class="hint-dark">Join Gloss Club opens a text message to 0444 546 092. Nothing is sent until you press send.</p>
+  <section class="page-hero" aria-labelledby="page-title">
+    <div class="section-heading__eyebrow">
+            <span class="bar" aria-hidden="true"></span>
+            <span class="label">Gloss Club</span>
+          </div>
+    <h1 class="page-hero__title" id="page-title">A clean car every month, from <span data-club="s">$55</span>.</h1>
+    <p class="page-hero__lede">A monthly Express Wash at a fixed member price. Priority booking, you pay after each wash, and you can pause or cancel any time.</p>
+    <div class="hero__ctas page-hero__ctas">
+      <a class="btn btn-primary" href="sms:0444546092?&body=Hi%20Refined%20Detailing%2C%20I%27d%20like%20to%20join%20Gloss%20Club.%0AVehicle%3A%20%0ASuburb%3A%20%0APreferred%20day%3A%20">Join Gloss Club <span class="btn-arrow" aria-hidden="true">&rarr;</span></a>
+      <a class="btn btn-secondary" href="book.html#pkg=express&amp;club=1">Price it for your car first</a>
     </div>
+    <p class="hint-note">Join Gloss Club opens a text message to 0444 546 092. Nothing is sent until you press send.</p>
   </section>
 
-  <section class="band band-light" aria-labelledby="club-prices-title">
-    <div class="wrap two-col">
-      <div data-reveal>
-        <p class="eyebrow">Member prices</p>
-        <h2 id="club-prices-title">One price per monthly wash.</h2>
+  <section class="service-detail is-reveal" aria-labelledby="club-prices-heading">
+    <div class="service-detail__inner service-detail__inner--top">
+      <div>
+        <span class="service-detail__num">Member prices</span>
+        <h2 class="service-detail__title" id="club-prices-heading">One price per monthly wash.</h2>
         <dl class="club-prices">
           <div><dt>Hatch, sedan or coupe</dt><dd><span data-club="s">$55</span></dd></div>
           <div><dt>SUV, wagon or dual-cab ute</dt><dd><span data-club="m">$65</span></dd></div>
           <div><dt>Large 4WD, 7-seater or van</dt><dd><span data-club="l">$70</span></dd></div>
           <div><dt>Motorbike</dt><dd><span data-club="b">$30</span></dd></div>
         </dl>
-        <p class="hint-light">Includes GST and travel to your door.</p>
+        <p class="hint-note">Includes GST and travel to your door.</p>
       </div>
-      <div data-reveal>
-        <p class="eyebrow">Every visit</p>
-        <h2>What each wash includes.</h2>
-        <ul class="tick-list tick-list-dark">
+      <div>
+        <span class="service-detail__num">Every visit</span>
+        <h2 class="service-detail__title">What each wash includes.</h2>
+        <ul class="tick-list">
           <li>Foam pre-wash and hand wash</li>
           <li>Wheels, tyres and arches cleaned</li>
           <li>Windows inside and out</li>
@@ -84,35 +91,52 @@
           <li>Tyre dressing</li>
           <li>Spray sealant boost, about 6 weeks</li>
         </ul>
-        <p>The sealant boost lasts about six weeks, so a monthly visit keeps it topped up before mud and sap get the chance to bake in.</p>
+        <p class="service-detail__desc">The sealant boost lasts about six weeks, so a monthly visit keeps it topped up before mud and sap get the chance to bake in.</p>
       </div>
     </div>
   </section>
 
-  <section class="band band-graphite" aria-labelledby="terms-title">
-    <div class="wrap">
-      <p class="eyebrow">The deal</p>
-      <h2 id="terms-title" data-reveal>You stay in control.</h2>
-      <ul class="terms">
-        <li data-reveal><strong>Priority booking</strong><span>Members are booked in first.</span></li>
-        <li data-reveal><strong>Pay after each wash</strong><span>Inspect the car first, then pay.</span></li>
-        <li data-reveal><strong>Pause or cancel any time</strong><span>No lock-in. Just tell us.</span></li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="band band-void" id="fleet" aria-labelledby="fleet-title">
-    <div class="wrap two-col">
-      <div data-reveal>
-        <p class="eyebrow">Dealerships and fleets</p>
-        <h2 id="fleet-title">The same crew, every visit.</h2>
-        <p class="section-lede">Vans, utes, sales lots and work vehicles kept clean without pulling anyone off the job. Tell us what you run and we'll quote it. There are no published fleet prices.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary btn-lg" href="sms:0444546092?&body=Hi%20Refined%20Detailing%2C%20I%27d%20like%20a%20fleet%20quote.%0ABusiness%3A%20%0ANumber%20of%20vehicles%3A%20%0ASuburb%3A%20">Get a fleet quote</a>
-          <a class="btn btn-ghost btn-lg" href="tel:0444546092">or call 0444 546 092</a>
+  <section class="section section--alt is-reveal" aria-labelledby="terms-heading">
+    <div class="section__inner">
+      <div class="section-heading section-heading--stacked">
+        <div class="section-heading__eyebrow">
+            <span class="bar" aria-hidden="true"></span>
+            <span class="label">The Deal</span>
+          </div>
+        <h2 class="section-heading__title" id="terms-heading">You stay in control.</h2>
+      </div>
+      <div class="process-grid">
+        <div class="process-card">
+          <span class="process-card__num">01</span>
+          <h3 class="process-card__title">Priority booking</h3>
+          <p class="process-card__desc">Members are booked in first.</p>
+        </div>
+        <div class="process-card">
+          <span class="process-card__num">02</span>
+          <h3 class="process-card__title">Pay after each wash</h3>
+          <p class="process-card__desc">Inspect the car first, then pay.</p>
+        </div>
+        <div class="process-card">
+          <span class="process-card__num">03</span>
+          <h3 class="process-card__title">Pause or cancel any time</h3>
+          <p class="process-card__desc">No lock-in. Just tell us.</p>
         </div>
       </div>
-      <ul class="terms terms-stack" data-reveal>
+    </div>
+  </section>
+
+  <section class="service-detail is-reveal" id="fleet" aria-labelledby="fleet-heading">
+    <div class="service-detail__inner service-detail__inner--top">
+      <div>
+        <span class="service-detail__num">Dealerships and fleets</span>
+        <h2 class="service-detail__title" id="fleet-heading">The same crew, every visit.</h2>
+        <p class="service-detail__desc">Vans, utes, sales lots and work vehicles kept clean without pulling anyone off the job. Tell us what you run and we'll quote it. There are no published fleet prices.</p>
+        <div class="hero__ctas">
+          <a class="btn btn-primary" href="sms:0444546092?&body=Hi%20Refined%20Detailing%2C%20I%27d%20like%20a%20fleet%20quote.%0ABusiness%3A%20%0ANumber%20of%20vehicles%3A%20%0ASuburb%3A%20">Get a fleet quote <span class="btn-arrow" aria-hidden="true">&rarr;</span></a>
+          <a class="btn btn-secondary" href="tel:0444546092">Or call 0444 546 092</a>
+        </div>
+      </div>
+      <ul class="stack-list">
         <li><strong>Same crew every visit</strong><span>The people who did it last time do it again.</span></li>
         <li><strong>Scheduled or on-call</strong><span>Regular runs, or call us when you need one.</span></li>
         <li><strong>One monthly invoice</strong><span>Every vehicle, one bill.</span></li>
@@ -123,24 +147,14 @@
 
 </main>
 <footer class="site-footer">
-  <div class="wrap footer-grid">
-    <div class="foot-brand">
-      <img src="images/logo.png" width="914" height="514" alt="Refined Detailing logo" loading="lazy">
-      <p>Mobile car detailing and ceramic coating. Based in Holmview, servicing Logan and surrounding suburbs.</p>
+  <div class="site-footer__grid">
+    <div>
+      <img class="site-footer__logo" src="images/logo.png" alt="Refined Detailing logo" width="914" height="514" loading="lazy">
+      <p class="site-footer__blurb">Mobile car detailing and ceramic coating. Based in Holmview, servicing Logan and surrounding suburbs.</p>
     </div>
     <div>
-      <p class="foot-h">Call or text</p>
-      <p class="foot-phone"><a href="tel:0444546092">0444 546 092</a></p>
-      <p class="foot-small">Price your car on the booking page, then text to book.</p>
-    </div>
-    <div>
-      <p class="foot-h">Where we work</p>
-      <ul class="suburbs"><li>Holmview</li><li>Logan</li><li>Beenleigh</li><li>Waterford</li><li>Loganholme</li><li>Springwood</li><li>Browns Plains</li><li>Jimboomba</li><li>Yatala</li><li>Ormeau</li><li>Brisbane South</li></ul>
-      <p class="foot-small">Not on the list? Add your suburb when you book and we'll confirm.</p>
-    </div>
-    <div>
-      <p class="foot-h">On this site</p>
-      <ul class="foot-links">
+      <h3 class="site-footer__heading">Navigate</h3>
+      <ul class="site-footer__links">
         <li><a href="index.html">Home</a></li>
         <li><a href="book.html">Prices and booking</a></li>
         <li><a href="ceramic-coating.html">Ceramic coating</a></li>
@@ -148,10 +162,21 @@
         <li><a href="index.html#faq">Questions</a></li>
       </ul>
     </div>
+    <div>
+      <h3 class="site-footer__heading">Contact</h3>
+      <ul class="site-footer__links">
+        <li><a href="tel:0444546092">0444 546 092</a></li>
+      </ul>
+      <p class="site-footer__note">Price your car on the booking page, then text to book.</p>
+    </div>
+    <div>
+      <h3 class="site-footer__heading">Where we work</h3>
+      <ul class="site-footer__suburbs"><li>Holmview</li><li>Logan</li><li>Beenleigh</li><li>Waterford</li><li>Loganholme</li><li>Springwood</li><li>Browns Plains</li><li>Jimboomba</li><li>Yatala</li><li>Ormeau</li><li>Brisbane South</li></ul>
+      <p class="site-footer__note">Not on the list? Add your suburb when you book and we'll confirm.</p>
+    </div>
   </div>
-  <div class="wrap foot-legal">
-    <p>Prices include GST. Estimated times depend on the condition of the vehicle.</p>
-    <p>&copy; 2026 Refined Detailing</p>
+  <div class="site-footer__bottom">
+    <p>&copy; 2026 Refined Detailing. Prices include GST. Estimated times depend on the condition of the vehicle.</p>
   </div>
 </footer>
 </body>

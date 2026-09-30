@@ -1,12 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-AU">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#000000">
 <title>Ceramic Coating Logan | Refined Detailing</title>
 <meta name="description" content="Ceramic coating without the sales pitch. What it does, what it does not, and fixed prices for 2, 5 and 8-year coatings, applied at your door in Logan.">
-<meta name="theme-color" content="#000000">
-<link rel="icon" type="image/png" href="images/favicon.png">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Refined Detailing">
 <meta property="og:title" content="Ceramic Coating Logan | Refined Detailing">
@@ -19,80 +19,103 @@
 <meta name="twitter:title" content="Ceramic Coating Logan | Refined Detailing">
 <meta name="twitter:description" content="Ceramic coating without the sales pitch. What it does, what it does not, and fixed prices for 2, 5 and 8-year coatings, applied at your door in Logan.">
 <meta name="twitter:image" content="images/og-image.jpg">
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,700;125,800&family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
-<script src="main.js" defer></script>
+<script src="main.js"></script>
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
+<a class="skip-link" href="#main">Skip to content</a>
+
 <header class="site-header">
-  <div class="wrap header-row">
-    <a class="brand" href="index.html"><img src="images/logo.png" width="914" height="514" alt="Refined Detailing"></a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu"><span class="nav-bars" aria-hidden="true"></span></button>
-    <nav class="site-nav" id="site-nav" aria-label="Main">
-      <ul>
-        <li><a href="book.html">Prices and booking</a></li>
-        <li><a href="ceramic-coating.html" aria-current="page">Ceramic coating</a></li>
-        <li><a href="index.html#why">Why us</a></li>
-        <li><a href="gloss-club.html">Gloss Club</a></li>
-        <li><a href="index.html#faq">Questions</a></li>
-      </ul>
-      <div class="nav-cta">
-        <a class="nav-phone" href="tel:0444546092">0444 546 092</a>
-        <a class="btn btn-primary" href="book.html">Book now</a>
-      </div>
-    </nav>
-  </div>
+  <a class="site-header__logo" href="index.html">
+    <img src="images/logo.png" alt="Refined Detailing" width="914" height="514">
+  </a>
+
+  <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle menu">
+    <span class="nav-toggle__bars"></span>
+  </button>
+
+  <nav class="site-nav" id="site-nav" aria-label="Primary">
+    <ul class="site-nav__links">
+      <li><a href="book.html">Prices &amp; Booking</a></li>
+      <li><a href="ceramic-coating.html" aria-current="page">Ceramic Coating</a></li>
+      <li><a href="index.html#why">Why Us</a></li>
+      <li><a href="gloss-club.html">Gloss Club</a></li>
+    </ul>
+    <div class="site-nav__actions">
+      <a class="btn btn-primary" href="book.html">Book a Detail <span class="btn-arrow" aria-hidden="true">&rarr;</span></a>
+      <span class="site-nav__divider" aria-hidden="true">|</span>
+      <a class="site-nav__phone" href="tel:0444546092">0444 546 092</a>
+    </div>
+  </nav>
 </header>
 
 <main id="main">
 
-  <section class="page-head" aria-labelledby="page-title">
-    <div class="wrap">
-      <p class="eyebrow">Ceramic coating</p>
-      <h1 id="page-title">Ceramic coating without the sales pitch.</h1>
-      <p class="lede">Here's what a coating does, what it doesn't, and what you pay for each one. Prices are fixed and include GST and travel to your door.</p>
-      <div class="hero-actions">
-        <a class="btn btn-primary btn-lg" href="book.html#pkg=ceramic5">Price your coating</a>
-        <a class="btn btn-ghost btn-lg" href="tel:0444546092">or call 0444 546 092</a>
-      </div>
+  <section class="page-hero" aria-labelledby="page-title">
+    <div class="section-heading__eyebrow">
+            <span class="bar" aria-hidden="true"></span>
+            <span class="label">Ceramic Coating</span>
+          </div>
+    <h1 class="page-hero__title" id="page-title">Ceramic coating without the sales pitch.</h1>
+    <p class="page-hero__lede">Here's what a coating does, what it doesn't, and what you pay for each one. Prices are fixed and include GST and travel to your door.</p>
+    <div class="hero__ctas page-hero__ctas">
+      <a class="btn btn-primary" href="book.html#pkg=ceramic5">Price your coating <span class="btn-arrow" aria-hidden="true">&rarr;</span></a>
+      <a class="btn btn-secondary" href="tel:0444546092">Or call 0444 546 092</a>
     </div>
   </section>
 
-  <section class="band band-graphite" aria-labelledby="does-title">
-    <div class="wrap two-col">
-      <div data-reveal>
-        <p class="eyebrow">What it does</p>
-        <h2 id="does-title">A hard, slick layer over your paint.</h2>
+  <section class="service-detail is-reveal" aria-labelledby="does-heading">
+    <div class="service-detail__inner">
+      <div>
+        <span class="service-detail__num">What it does</span>
+        <h2 class="service-detail__title" id="does-heading">A hard, slick layer over your paint.</h2>
         <ul class="tick-list">
           <li>Mud, bugs and bird droppings wipe off more easily.</li>
           <li>Water beads and sheds.</li>
           <li>Gloss stays sharper.</li>
           <li>UV has a tougher barrier to get through.</li>
         </ul>
-        <p>That last one is the reason to do it here. South-east Queensland sun fades and chalks clear coat. A coating takes that punishment instead of your paint.</p>
+        <p class="service-detail__desc">That last one is the reason to do it here. South-east Queensland sun fades and chalks clear coat. A coating takes that punishment instead of your paint.</p>
       </div>
-      <div data-reveal>
-        <p class="eyebrow">What it doesn't</p>
-        <h2 id="doesnt-title">It's not armour.</h2>
+      <div class="service-detail__media">
+        <img src="images/ceramic-coating-porsche-rear-gloss.jpg" alt="Rear of a black convertible with a deep gloss finish under a carport" loading="lazy" width="900" height="1600">
+      </div>
+    </div>
+  </section>
+
+  <section class="service-detail section--alt is-reveal" aria-labelledby="doesnt-heading">
+    <div class="service-detail__inner">
+      <div class="service-detail__media">
+        <img src="images/gallery-bmw-night-detail.jpg" alt="Sports coupe after an evening detail under work lights" loading="lazy" width="788" height="1400">
+      </div>
+      <div>
+        <span class="service-detail__num">What it doesn't</span>
+        <h2 class="service-detail__title" id="doesnt-heading">It's not armour.</h2>
         <ul class="cross-list">
           <li>It won't stop stone chips or deep scratches.</li>
           <li>It isn't maintenance-free. You still wash the car.</li>
           <li>If anyone tells you otherwise, they're selling something.</li>
         </ul>
-        <p>Ceramic coating is for cars, SUVs, utes and 4WDs. We don't offer it for motorbikes.</p>
+        <p class="service-detail__desc">Ceramic coating is for cars, SUVs, utes and 4WDs. We don't offer it for motorbikes.</p>
       </div>
     </div>
   </section>
 
-  <section class="band band-light" aria-labelledby="vs-title">
-    <div class="wrap">
-      <p class="eyebrow">Wax, sealant or ceramic</p>
-      <h2 id="vs-title" data-reveal>Which protection is right for your car?</h2>
-      <table class="vs" data-reveal>
-        <caption class="sr-only">Wax compared with sealant and ceramic coating</caption>
+  <section class="section is-reveal" aria-labelledby="vs-heading">
+    <div class="section__inner">
+      <div class="section-heading section-heading--stacked">
+        <div class="section-heading__eyebrow">
+            <span class="bar" aria-hidden="true"></span>
+            <span class="label">Wax, Sealant Or Ceramic</span>
+          </div>
+        <h2 class="section-heading__title" id="vs-heading">Which protection is right for your car?</h2>
+      </div>
+      <table class="vs">
+        <caption class="visually-hidden">Wax compared with sealant and ceramic coating</caption>
         <thead>
-          <tr><th scope="col"><span class="sr-only">Feature</span></th><th scope="col">Wax</th><th scope="col">Sealant</th><th scope="col">Ceramic</th></tr>
+          <tr><th scope="col"><span class="visually-hidden">Feature</span></th><th scope="col">Wax</th><th scope="col">Sealant</th><th scope="col">Ceramic</th></tr>
         </thead>
         <tbody>
           <tr><th scope="row">Lasts</th><td>Weeks</td><td>Months</td><td>Years, depending on the product</td></tr>
@@ -104,107 +127,101 @@
     </div>
   </section>
 
-  <section class="band band-light band-flush" id="coatings" aria-labelledby="coatings-title">
-    <div class="wrap">
-      <p class="eyebrow">The three coatings</p>
-      <h2 id="coatings-title" data-reveal>Two, five or eight years. Fixed prices for every size.</h2>
+  <section class="section section--alt is-reveal" id="coatings" aria-labelledby="coatings-heading">
+    <div class="section__inner">
+      <div class="section-heading section-heading--stacked">
+        <div class="section-heading__eyebrow">
+            <span class="bar" aria-hidden="true"></span>
+            <span class="label">The Three Coatings</span>
+          </div>
+        <h2 class="section-heading__title" id="coatings-heading">Two, five or eight years. Fixed prices for every size.</h2>
+      </div>
       <div class="coats">
-        <article class="coat" data-reveal>
-          <div class="coat-head">
-            <h3>Ceramic Coating, 2-year</h3>
+        <article class="coat">
+          <div class="coat__head">
+            <h3 class="coat__title">Ceramic Coating, 2-year</h3>
             
           </div>
-          <p class="coat-blurb">Entry-level protection with a proper polish underneath.</p>
-          <dl class="coat-prices">
+          <p class="coat__blurb">Entry-level protection with a proper polish underneath.</p>
+          <dl class="coat__prices">
             <div><dt>Hatch, sedan or coupe</dt><dd><span data-price="ceramic2">$690</span></dd></div>
             <div><dt>SUV, wagon or dual-cab ute</dt><dd><span data-price="ceramic2" data-size="m">$795</span></dd></div>
             <div><dt>Large 4WD, 7-seater or van</dt><dd><span data-price="ceramic2" data-size="l">$895</span></dd></div>
           </dl>
-          <ul class="coat-list">
+          <ul class="coat__list">
             <li>Full wash, iron and clay decontamination</li>
             <li>Single-stage enhancement polish</li>
             <li>One layer of 2-year ceramic coating</li>
             <li>Aftercare guide and first-wash tips</li>
           </ul>
-          <p class="coat-meta"><strong>Layers:</strong> One<br><strong>Check-ups:</strong> None. You get an aftercare guide and first-wash tips.<br><strong>Time:</strong> Full day</p>
-          <a class="btn btn-dark" href="book.html#pkg=ceramic2">Price the 2-year coating</a>
+          <p class="coat__meta"><strong>Layers:</strong> One<br><strong>Check-ups:</strong> None. You get an aftercare guide and first-wash tips.<br><strong>Time:</strong> Full day</p>
+          <a class="btn btn-secondary" href="book.html#pkg=ceramic2">Price the 2-year <span class="btn-arrow" aria-hidden="true">&rarr;</span></a>
         </article>
-        <article class="coat" data-reveal>
-          <div class="coat-head">
-            <h3>Ceramic Coating, 5-year</h3>
+        <article class="coat coat--feature">
+          <div class="coat__head">
+            <h3 class="coat__title">Ceramic Coating, 5-year</h3>
             <span class="chip">Best balance</span>
           </div>
-          <p class="coat-blurb">The sweet spot of durability and price for most owners.</p>
-          <dl class="coat-prices">
+          <p class="coat__blurb">The sweet spot of durability and price for most owners.</p>
+          <dl class="coat__prices">
             <div><dt>Hatch, sedan or coupe</dt><dd><span data-price="ceramic5">$1,090</span></dd></div>
             <div><dt>SUV, wagon or dual-cab ute</dt><dd><span data-price="ceramic5" data-size="m">$1,255</span></dd></div>
             <div><dt>Large 4WD, 7-seater or van</dt><dd><span data-price="ceramic5" data-size="l">$1,415</span></dd></div>
           </dl>
-          <ul class="coat-list">
+          <ul class="coat__list">
             <li>Everything in the 2-year coating</li>
             <li>Two layers of 5-year ceramic coating</li>
             <li>Rain-repellent glass coating</li>
             <li>Free 6-month check-up</li>
           </ul>
-          <p class="coat-meta"><strong>Layers:</strong> Two<br><strong>Check-ups:</strong> Free 6-month check-up<br><strong>Time:</strong> 1 to 2 days</p>
-          <a class="btn btn-dark" href="book.html#pkg=ceramic5">Price the 5-year coating</a>
+          <p class="coat__meta"><strong>Layers:</strong> Two<br><strong>Check-ups:</strong> Free 6-month check-up<br><strong>Time:</strong> 1 to 2 days</p>
+          <a class="btn btn-primary" href="book.html#pkg=ceramic5">Price the 5-year <span class="btn-arrow" aria-hidden="true">&rarr;</span></a>
         </article>
-        <article class="coat" data-reveal>
-          <div class="coat-head">
-            <h3>Ceramic Coating, 8-year</h3>
+        <article class="coat">
+          <div class="coat__head">
+            <h3 class="coat__title">Ceramic Coating, 8-year</h3>
             
           </div>
-          <p class="coat-blurb">Our toughest system, for cars you plan to keep.</p>
-          <dl class="coat-prices">
+          <p class="coat__blurb">Our toughest system, for cars you plan to keep.</p>
+          <dl class="coat__prices">
             <div><dt>Hatch, sedan or coupe</dt><dd><span data-price="ceramic8">$1,590</span></dd></div>
             <div><dt>SUV, wagon or dual-cab ute</dt><dd><span data-price="ceramic8" data-size="m">$1,830</span></dd></div>
             <div><dt>Large 4WD, 7-seater or van</dt><dd><span data-price="ceramic8" data-size="l">$2,065</span></dd></div>
           </dl>
-          <ul class="coat-list">
+          <ul class="coat__list">
             <li>Everything in the 5-year coating</li>
             <li>Three-layer 8-year ceramic system</li>
             <li>Wheel faces and trim coated</li>
             <li>Rain-repellent glass coating</li>
             <li>Free 6-month and 12-month check-ups</li>
           </ul>
-          <p class="coat-meta"><strong>Layers:</strong> Three<br><strong>Check-ups:</strong> Free 6-month and 12-month check-ups<br><strong>Time:</strong> 2 days</p>
-          <a class="btn btn-dark" href="book.html#pkg=ceramic8">Price the 8-year coating</a>
+          <p class="coat__meta"><strong>Layers:</strong> Three<br><strong>Check-ups:</strong> Free 6-month and 12-month check-ups<br><strong>Time:</strong> 2 days</p>
+          <a class="btn btn-secondary" href="book.html#pkg=ceramic8">Price the 8-year <span class="btn-arrow" aria-hidden="true">&rarr;</span></a>
         </article>
       </div>
-      <p class="section-cta"><a class="text-link-dark" href="book.html">Prefer to compare with everything else? See all packages and add-ons.</a></p>
+      <p class="price-disclaimer price-disclaimer--section">Prefer to compare with everything else? <a href="book.html">See all packages and add-ons.</a></p>
     </div>
   </section>
 
-  <section class="closing" aria-labelledby="closing-title">
-    <div class="wrap closing-inner">
-      <h2 id="closing-title">Pick a coating, see your price, then text to book.</h2>
-      <div class="hero-actions">
-        <a class="btn btn-primary btn-lg" href="book.html#pkg=ceramic5">Price your coating</a>
-        <a class="btn btn-ghost btn-lg" href="tel:0444546092">or call 0444 546 092</a>
-      </div>
+  <section class="section section--divider cta is-reveal" aria-labelledby="cta-heading">
+    <h2 class="cta__title" id="cta-heading">Pick a coating, see your price, then text to book.</h2>
+    <p class="cta__lede">One fixed total, shown before you book.</p>
+    <div class="cta__actions">
+      <a class="btn btn-primary" href="book.html">Price and book your detail <span class="btn-arrow" aria-hidden="true">&rarr;</span></a>
+      <a class="btn btn-secondary" href="tel:0444546092">Or call 0444 546 092</a>
     </div>
   </section>
 
 </main>
 <footer class="site-footer">
-  <div class="wrap footer-grid">
-    <div class="foot-brand">
-      <img src="images/logo.png" width="914" height="514" alt="Refined Detailing logo" loading="lazy">
-      <p>Mobile car detailing and ceramic coating. Based in Holmview, servicing Logan and surrounding suburbs.</p>
+  <div class="site-footer__grid">
+    <div>
+      <img class="site-footer__logo" src="images/logo.png" alt="Refined Detailing logo" width="914" height="514" loading="lazy">
+      <p class="site-footer__blurb">Mobile car detailing and ceramic coating. Based in Holmview, servicing Logan and surrounding suburbs.</p>
     </div>
     <div>
-      <p class="foot-h">Call or text</p>
-      <p class="foot-phone"><a href="tel:0444546092">0444 546 092</a></p>
-      <p class="foot-small">Price your car on the booking page, then text to book.</p>
-    </div>
-    <div>
-      <p class="foot-h">Where we work</p>
-      <ul class="suburbs"><li>Holmview</li><li>Logan</li><li>Beenleigh</li><li>Waterford</li><li>Loganholme</li><li>Springwood</li><li>Browns Plains</li><li>Jimboomba</li><li>Yatala</li><li>Ormeau</li><li>Brisbane South</li></ul>
-      <p class="foot-small">Not on the list? Add your suburb when you book and we'll confirm.</p>
-    </div>
-    <div>
-      <p class="foot-h">On this site</p>
-      <ul class="foot-links">
+      <h3 class="site-footer__heading">Navigate</h3>
+      <ul class="site-footer__links">
         <li><a href="index.html">Home</a></li>
         <li><a href="book.html">Prices and booking</a></li>
         <li><a href="ceramic-coating.html">Ceramic coating</a></li>
@@ -212,10 +229,21 @@
         <li><a href="index.html#faq">Questions</a></li>
       </ul>
     </div>
+    <div>
+      <h3 class="site-footer__heading">Contact</h3>
+      <ul class="site-footer__links">
+        <li><a href="tel:0444546092">0444 546 092</a></li>
+      </ul>
+      <p class="site-footer__note">Price your car on the booking page, then text to book.</p>
+    </div>
+    <div>
+      <h3 class="site-footer__heading">Where we work</h3>
+      <ul class="site-footer__suburbs"><li>Holmview</li><li>Logan</li><li>Beenleigh</li><li>Waterford</li><li>Loganholme</li><li>Springwood</li><li>Browns Plains</li><li>Jimboomba</li><li>Yatala</li><li>Ormeau</li><li>Brisbane South</li></ul>
+      <p class="site-footer__note">Not on the list? Add your suburb when you book and we'll confirm.</p>
+    </div>
   </div>
-  <div class="wrap foot-legal">
-    <p>Prices include GST. Estimated times depend on the condition of the vehicle.</p>
-    <p>&copy; 2026 Refined Detailing</p>
+  <div class="site-footer__bottom">
+    <p>&copy; 2026 Refined Detailing. Prices include GST. Estimated times depend on the condition of the vehicle.</p>
   </div>
 </footer>
 </body>

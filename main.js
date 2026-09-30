@@ -325,20 +325,20 @@
     });
   }
 
-  /* Scroll reveal. Anything already on screen is left alone. */
+  /* Section reveal. Without JS every section is simply visible. */
   function initReveal() {
-    if (reduceMotion() || !('IntersectionObserver' in window)) return;
+    const sections = $$('.is-reveal');
+    if (!sections.length) return;
+    if (reduceMotion() || !('IntersectionObserver' in window)) {
+      sections.forEach(function (el) { el.classList.add('is-visible'); });
+      return;
+    }
     const io = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) {
-        if (en.isIntersecting) { en.target.classList.add('is-in'); io.unobserve(en.target); }
+        if (en.isIntersecting) { en.target.classList.add('is-visible'); io.unobserve(en.target); }
       });
-    }, { threshold: 0.1 });
-    $$('[data-reveal]').forEach(function (el) {
-      if (el.getBoundingClientRect().top > window.innerHeight * 0.92) {
-        el.classList.add('rv');
-        io.observe(el);
-      }
-    });
+    }, { threshold: 0.08 });
+    sections.forEach(function (el) { io.observe(el); });
   }
 
   /* FAQ accordion. Without JS every answer stays open. */
@@ -418,6 +418,286 @@
     sec.hidden = false;
   }
 
+  /* Cinematic hero. Scroll position through the tall .hero-cinema track drives
+     video.currentTime (smoothed in rAF, never set straight from the scroll
+     event) plus the intro and outro text. Narrow screens and reduced motion get
+     a static poster and always-visible intro text, matching the CSS. The video
+     file is a placeholder (videos/hero-orbit.mp4): swap the file, keep the name. */
+  function initHeroCinema() {
+    const section = document.getElementById('heroCinema');
+    const video = document.getElementById('heroVideo');
+    const startEl = document.getElementById('heroContentStart');
+    const endEl = document.getElementById('heroContentEnd');
+    if (!section || !video || !startEl || !endEl) return;
+
+    const narrowQuery = window.matchMedia('(max-width: 900px)');
+    const reduceQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const EASE = 0.12;
+    const SNAP_EPSILON = 0.0006;
+    const SEEK_EPSILON = 1 / 48;
+
+    let active = false;
+    let observer = null;
+    let rafId = null;
+    let intersecting = false;
+    let progressInitialized = false;
+    let current = 0;
+    let videoReady = false;
+
+    const clamp = function (v, min, max) { return Math.min(max, Math.max(min, v)); };
+    const lerp = function (a, b, t) { return a + (b - a) * t; };
+    const smoothstep = function (t) { return t * t * (3 - 2 * t); };
+
+    function startOpacity(p) {
+      if (p <= 0.10) return lerp(1, 0.7, smoothstep(p / 0.10));
+      if (p <= 0.20) return lerp(0.7, 0, smoothstep((p - 0.10) / 0.10));
+      return 0;
+    }
+    function startTranslate(p) { return p <= 0.20 ? lerp(0, -14, smoothstep(p / 0.20)) : -14; }
+    function endAmount(p) {
+      if (p <= 0.75) return 0;
+      if (p <= 0.90) return smoothstep((p - 0.75) / 0.15);
+      return 1;
+    }
+    function setVisible(el, visible) {
+      el.style.pointerEvents = visible ? 'auto' : 'none';
+      if (visible) el.removeAttribute('aria-hidden'); else el.setAttribute('aria-hidden', 'true');
+      $$('a, button', el).forEach(function (c) { c.tabIndex = visible ? 0 : -1; });
+    }
+    function applyText(p) {
+      const so = startOpacity(p);
+      startEl.style.opacity = so;
+      startEl.style.transform = 'translateY(' + startTranslate(p) + 'px)';
+      setVisible(startEl, so > 0.05);
+      const ea = endAmount(p);
+      endEl.style.opacity = ea;
+      endEl.style.transform = 'translateY(' + lerp(20, 0, ea) + 'px)';
+      setVisible(endEl, ea > 0.5);
+    }
+    function tick() {
+      const rect = section.getBoundingClientRect();
+      const sectionTop = window.scrollY + rect.top;
+      const scrollable = section.offsetHeight - window.innerHeight;
+      const target = scrollable > 0 ? clamp((window.scrollY - sectionTop) / scrollable, 0, 1) : 0;
+      if (!progressInitialized) { current = target; progressInitialized = true; }
+      else if (Math.abs(target - current) < SNAP_EPSILON) current = target;
+      else current += (target - current) * EASE;
+
+      if (videoReady && video.duration) {
+        const desired = clamp(current * video.duration, 0, video.duration - 0.02);
+        if (Math.abs(video.currentTime - desired) > SEEK_EPSILON) {
+          try { video.currentTime = desired; } catch (err) { /* mid-seek errors are transient */ }
+        }
+      }
+      applyText(current);
+      rafId = intersecting ? requestAnimationFrame(tick) : null;
+    }
+    function startLoop() { if (rafId === null) rafId = requestAnimationFrame(tick); }
+
+    function enableCinema() {
+      if (active) return;
+      active = true;
+      if (!video.hasChildNodes()) {
+        const source = document.createElement('source');
+        source.src = 'videos/hero-orbit.mp4';
+        source.type = 'video/mp4';
+        video.preload = 'auto';
+        video.appendChild(source);
+        video.load();
+      }
+      video.addEventListener('loadedmetadata', function () { videoReady = true; }, { once: true });
+      video.addEventListener('loadeddata', function () { video.classList.add('is-ready'); }, { once: true });
+      observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) { intersecting = en.isIntersecting; if (intersecting) startLoop(); });
+      }, { threshold: 0 });
+      observer.observe(section);
+      progressInitialized = false;
+      startLoop();
+    }
+
+    function disableCinema() {
+      if (!active) return;
+      active = false;
+      if (observer) { observer.disconnect(); observer = null; }
+      if (rafId !== null) { cancelAnimationFrame(rafId); rafId = null; }
+      intersecting = false;
+      videoReady = false;
+      video.classList.remove('is-ready');
+      video.pause();
+      video.removeAttribute('src');
+      while (video.firstChild) video.removeChild(video.firstChild);
+      video.load();
+      [startEl, endEl].forEach(function (el) {
+        el.style.opacity = '';
+        el.style.transform = '';
+        el.style.pointerEvents = '';
+        el.removeAttribute('aria-hidden');
+        $$('a, button', el).forEach(function (c) { c.removeAttribute('tabindex'); });
+      });
+    }
+
+    function evaluate() { (narrowQuery.matches || reduceQuery.matches) ? disableCinema() : enableCinema(); }
+    narrowQuery.addEventListener('change', evaluate);
+    reduceQuery.addEventListener('change', evaluate);
+    evaluate();
+  }
+
+  /* Small looping clips load and play only while on screen. Never under
+     reduced motion: the poster stays. */
+  function initAutoplayVideos() {
+    const videos = $$('video.autoplay-video[data-autoplay-src]');
+    if (!videos.length || reduceMotion()) return;
+    const io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        const v = en.target;
+        if (en.isIntersecting) {
+          if (!v.src) { v.src = v.getAttribute('data-autoplay-src'); v.load(); }
+          const p = v.play();
+          if (p && p.catch) p.catch(function () { /* autoplay blocked: poster stays */ });
+        } else v.pause();
+      });
+    }, { threshold: 0.35 });
+    videos.forEach(function (v) { io.observe(v); });
+  }
+
+  /* Page transition. An internal link click plays a short car clip over black,
+     the old page navigates at the clip's midpoint and the new page picks the
+     clip up where it left off (handed over through sessionStorage). Every path
+     has a timeout so the overlay can never get stuck. Clip files are
+     placeholders (videos/car-cutscene.*): swap the files, keep the names. */
+  const CUT_KEY = 'rd-cutscene';
+
+  function peekCutscene() {
+    try {
+      const c = JSON.parse(sessionStorage.getItem(CUT_KEY));
+      if (c && Date.now() - c.at < 4000 && !reduceMotion()) document.documentElement.classList.add('cutscene-arrive');
+    } catch (err) { /* storage unavailable */ }
+  }
+
+  function initPageTransition() {
+    const NAV_AT = 0.3;
+    const NAV_FALLBACK_MS = 700;
+    const HARD_LIMIT_MS = 2500;
+    const root = document.documentElement;
+
+    let arrival = null;
+    try {
+      arrival = JSON.parse(sessionStorage.getItem(CUT_KEY));
+      sessionStorage.removeItem(CUT_KEY);
+    } catch (err) { /* no handover */ }
+
+    const saveData = navigator.connection && navigator.connection.saveData;
+    if (reduceMotion() || saveData) { root.classList.remove('cutscene-arrive'); return; }
+    const arriving = !!arrival && Date.now() - arrival.at < 4000;
+
+    const overlay = document.createElement('div');
+    overlay.className = 'cutscene';
+    overlay.setAttribute('aria-hidden', 'true');
+    const video = document.createElement('video');
+    video.muted = true;
+    video.defaultMuted = true;
+    video.setAttribute('muted', '');
+    video.setAttribute('playsinline', '');
+    video.setAttribute('disablepictureinpicture', '');
+    video.tabIndex = -1;
+    video.preload = 'auto';
+    video.poster = 'images/car-cutscene-poster.jpg';
+    [['videos/car-cutscene.webm', 'video/webm'], ['videos/car-cutscene.mp4', 'video/mp4']].forEach(function (pair) {
+      const source = document.createElement('source');
+      source.src = pair[0];
+      source.type = pair[1];
+      video.appendChild(source);
+    });
+    overlay.appendChild(video);
+    document.body.appendChild(overlay);
+
+    let timers = [];
+    let running = false;
+    let navigated = false;
+    const later = function (fn, ms) { timers.push(setTimeout(fn, ms)); };
+    const clearTimers = function () { timers.forEach(clearTimeout); timers = []; };
+
+    function hide(instant) {
+      clearTimers();
+      running = false;
+      navigated = false;
+      video.pause();
+      overlay.classList.remove('is-seeking');
+      if (instant) overlay.classList.add('is-instant');
+      overlay.classList.remove('is-active');
+      if (instant) requestAnimationFrame(function () { requestAnimationFrame(function () { overlay.classList.remove('is-instant'); }); });
+    }
+
+    if (arriving) {
+      running = true;
+      overlay.classList.add('is-active', 'is-instant', 'is-seeking');
+      root.classList.remove('cutscene-arrive');
+      requestAnimationFrame(function () { requestAnimationFrame(function () { overlay.classList.remove('is-instant'); }); });
+      const offset = Math.max(0, (arrival.vt || 0) + (Date.now() - arrival.at) / 1000);
+      const resume = function () {
+        if (offset >= video.duration - 0.05) { hide(); return; }
+        video.addEventListener('seeked', function () { overlay.classList.remove('is-seeking'); }, { once: true });
+        video.currentTime = offset;
+        const p = video.play();
+        if (p && p.catch) p.catch(function () { hide(); });
+      };
+      if (video.readyState >= 1) resume(); else video.addEventListener('loadedmetadata', resume, { once: true });
+      video.addEventListener('ended', function () { hide(); }, { once: true });
+      video.addEventListener('error', function () { hide(); }, { once: true });
+      later(function () { hide(); }, HARD_LIMIT_MS);
+    } else {
+      root.classList.remove('cutscene-arrive');
+      video.load();
+    }
+
+    function isCutsceneLink(link) {
+      const href = link.getAttribute('href');
+      if (!href || href.charAt(0) === '#') return false;
+      if (link.target && link.target !== '_self') return false;
+      if (link.hasAttribute('download')) return false;
+      let url;
+      try { url = new URL(link.href, window.location.href); } catch (err) { return false; }
+      if (url.protocol !== window.location.protocol || url.origin !== window.location.origin) return false;
+      if (!/(\/|\.html?)$/.test(url.pathname)) return false;
+      if (url.pathname === window.location.pathname) return false;
+      return true;
+    }
+
+    function play(href) {
+      running = true;
+      navigated = false;
+      overlay.classList.remove('is-seeking');
+      video.currentTime = 0;
+      const started = video.play();
+      const go = function () {
+        if (navigated) return;
+        navigated = true;
+        try { sessionStorage.setItem(CUT_KEY, JSON.stringify({ at: Date.now(), vt: video.currentTime })); } catch (err) { /* no handover */ }
+        window.location.href = href;
+      };
+      if (started && started.catch) started.catch(function () { hide(); window.location.href = href; });
+      overlay.classList.add('is-active');
+      const watch = function () {
+        if (navigated || !running) return;
+        if (video.currentTime >= NAV_AT) go(); else requestAnimationFrame(watch);
+      };
+      requestAnimationFrame(watch);
+      later(go, NAV_FALLBACK_MS);
+      later(function () { hide(); }, HARD_LIMIT_MS);
+    }
+
+    document.addEventListener('click', function (e) {
+      if (e.defaultPrevented || e.button !== 0) return;
+      if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+      const link = e.target.closest && e.target.closest('a[href]');
+      if (!link || !isCutsceneLink(link)) return;
+      e.preventDefault();
+      if (running) return;
+      play(link.href);
+    });
+    window.addEventListener('pageshow', function (e) { if (e.persisted) hide(true); });
+  }
+
   /* ---------------------------------------------------------------- */
   /* BOOKING PAGE                                                     */
   /* ---------------------------------------------------------------- */
@@ -446,7 +726,7 @@
     /* ----- vehicle ----- */
     function renderVehicle() {
       $('#vehicle-options').innerHTML =
-        '<fieldset class="opts"><legend class="sr-only">Vehicle type</legend>' +
+        '<fieldset class="opts"><legend class="visually-hidden">Vehicle type</legend>' +
         DATA.sizes.map(function (s) {
           return '<div class="opt"><input type="radio" name="size" id="size-' + s.id + '" value="' + s.id + '">' +
             '<label for="size-' + s.id + '"><span class="opt-name">' + s.name + '</span><span class="opt-eg">' + s.eg + '</span></label></div>';
@@ -917,7 +1197,7 @@
         const ta = document.createElement('textarea');
         ta.value = text;
         ta.setAttribute('readonly', '');
-        ta.className = 'sr-only';
+        ta.className = 'visually-hidden';
         document.body.appendChild(ta);
         ta.select();
         let ok = false;
@@ -961,11 +1241,20 @@
     window.addEventListener('hashchange', applyHash);
   }
 
-  initPriceLabels();
-  initNav();
-  initSmoothScroll();
-  initReveal();
-  initFaq();
-  initSlider();
-  initBuilder();
+  peekCutscene();
+
+  function boot() {
+    initPriceLabels();
+    initNav();
+    initSmoothScroll();
+    initReveal();
+    initHeroCinema();
+    initAutoplayVideos();
+    initFaq();
+    initSlider();
+    initBuilder();
+    initPageTransition();
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot);
+  else boot();
 })();
