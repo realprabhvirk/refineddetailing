@@ -422,7 +422,7 @@
      video.currentTime (smoothed in rAF, never set straight from the scroll
      event) plus the intro and outro text. Narrow screens and reduced motion get
      a static poster and always-visible intro text, matching the CSS. The video
-     file is a placeholder (videos/hero-orbit.mp4): swap the file, keep the name. */
+     is videos/hero-orbit.mp4 (short keyframe spacing so scrubbing is smooth). */
   function initHeroCinema() {
     const section = document.getElementById('heroCinema');
     const video = document.getElementById('heroVideo');
@@ -563,8 +563,8 @@
   /* Page transition. An internal link click plays a short car clip over black,
      the old page navigates at the clip's midpoint and the new page picks the
      clip up where it left off (handed over through sessionStorage). Every path
-     has a timeout so the overlay can never get stuck. Clip files are
-     placeholders (videos/car-cutscene.*): swap the files, keep the names. */
+     has a timeout so the overlay can never get stuck. The clip is 0.8s
+     (videos/car-cutscene.mp4 and .webm). */
   const CUT_KEY = 'rd-cutscene';
 
   function peekCutscene() {
@@ -575,9 +575,9 @@
   }
 
   function initPageTransition() {
-    const NAV_AT = 0.3;
-    const NAV_FALLBACK_MS = 700;
-    const HARD_LIMIT_MS = 2500;
+    const NAV_AT = 0.4;
+    const NAV_FALLBACK_MS = 600;
+    const HARD_LIMIT_MS = 1800;
     const root = document.documentElement;
 
     let arrival = null;
@@ -588,7 +588,7 @@
 
     const saveData = navigator.connection && navigator.connection.saveData;
     if (reduceMotion() || saveData) { root.classList.remove('cutscene-arrive'); return; }
-    const arriving = !!arrival && Date.now() - arrival.at < 4000;
+    const arriving = !!arrival && Date.now() - arrival.at < 2500;
 
     const overlay = document.createElement('div');
     overlay.className = 'cutscene';
